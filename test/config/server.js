@@ -23,7 +23,7 @@ function startServer(options = {}, cb = Function.prototype) {
     notify: false,
     open: false,
     rewriteRules: [
-      // Replace docsify-related CDN URLs with local paths
+      // 将 docsify 相关的 CDN URL 替换为本地路径
       {
         match:
           /(https?:)?\/\/cdn\.jsdelivr\.net\/npm\/docsify(@\d?\.?\d?\.?\d)?\/lib\//g,
@@ -72,10 +72,10 @@ function startServer(options = {}, cb = Function.prototype) {
 
   console.log('\n');
 
-  // Set TEST_HOST environment variable
+  // 设置 TEST_HOST 环境变量
   process.env.TEST_HOST = `http://${serverConfig.hostname}:${serverConfig.port}`;
 
-  // Start server
+  // 启动服务器
   browserSync.init(
     // Config
     {
