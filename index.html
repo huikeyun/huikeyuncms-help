@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8"/>
+  <title>慧科云CMS帮助文档</title>
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta content="慧科云CMS帮助文档" name="description">
+  <meta content="慧科云CMS帮助文档" name="keywords">
+  <meta content="慧科云" name="author">
+  <!-- docsify-darklight-theme -->
+  <link
+    href="https://cdn.bootcdn.net/ajax/libs/docsify-darklight-theme/3.2.0/style.min.css"
+    rel="stylesheet"
+    title="docsify-darklight-theme"
+    type="text/css"
+  />
+
+  <!-- 代码高亮 -->
+  <link href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-3-M/prism/9000.0.1/themes/prism.min.css" type="text/css" rel="stylesheet" />
+
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/fontawesome.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/brands.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/regular.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/solid.css" />
+  <style>
+    nav.app-nav li ul {
+      min-width: 100px;
+    }
+
+    #carbonads {
+      box-shadow: none !important;
+      width: auto !important;
+    }
+  </style>
+</head>
+
+<body>
+<div id="app">稍等一会，马上就加载好 ...</div>
+<!--<script src="//cdn.jsdelivr.net/npm/docsify-plugin-carbon@1"></script>-->
+<script>
+  // 根据 URL 设置 html“lang”属性
+  /*var lang = location.hash.match(/#\/(de-de|es|ru-ru|zh-cn)\//);*/
+
+  /*if (lang) {
+    document.documentElement.setAttribute('lang', lang[1]);
+  }*/
+  const footerHtml = [
+    '<hr/>',
+    '<footer>',
+    '<span><a href="https://www.npmjs.com/package/@zhg-x/docsify-plugins" target="_blank">docsify-plugins</a></span>',
+    '<span style="margin-left: 20px;"><a href="https://docsify.js.org/#/zh-cn/" target="_blank">docsify文档</a>.</span>',
+    '</footer>'
+  ].join('');
+  const footerNode = document.createElement('div');
+  footerNode.innerHTML = footerHtml;
+  footerNode.style.padding = '0 30px';
+  footerNode.style.textAlign = 'center';
+  // 文档化配置
+  window.$docsify = {
+    // docsify-darklight-theme
+    darklightTheme: {
+      siteFont: "Source Sans Pro",
+      defaultTheme: 'dark',
+      codeFontFamily: 'Roboto Mono, Monaco, courier, monospace',
+      bodyFontSize: '17px',
+      dark: {
+        accent: '#42b983',
+        toogleBackground: '#ffffff',
+        background: '#091a28',
+        textColor: '#b4b4b4',
+        codeTextColor: '#ffffff',
+        codeBackgroundColor: '#0e2233',
+        borderColor: '#0d2538',
+        blockQuoteColor: '#858585',
+        highlightColor: '#d22778',
+        sidebarSublink: '#b4b4b4',
+        codeTypeColor: '#ffffff',
+        coverBackground: 'linear-gradient(to left bottom, hsl(118, 100%, 85%) 0%,hsl(181, 100%, 85%) 100%)',
+        toogleImage: 'url(https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/icons/sun.svg)'
+      },
+      light: {
+        accent: '#42b983',
+        toogleBackground: '#091a28',
+        background: '#ffffff',
+        textColor: '#34495e',
+        codeTextColor: '#525252',
+        codeBackgroundColor: '#f8f8f8',
+        borderColor: 'rgba(0, 0, 0, 0.07)',
+        blockQuoteColor: '#858585',
+        highlightColor: '#d22778',
+        sidebarSublink: '#b4b4b4',
+        codeTypeColor: '#091a28',
+        coverBackground: 'linear-gradient(to left bottom, hsl(118, 100%, 85%) 0%,hsl(181, 100%, 85%) 100%)',
+        toogleImage: 'url(https://cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/icons/moon.svg)'
+      }
+    },
+
+    // 仓库地址
+    repo: '',
+
+    // 配置最大支持渲染的标题层级
+    maxLevel: 4,
+
+
+    // 加载自定义导航栏
+    loadNavbar: true,
+
+    // 加载自定义侧边栏
+    loadSidebar: true,
+
+    // 完全隐藏侧边栏
+    hideSidebar: false,
+
+    // 设置生成目录的最大层级
+    subMaxLevel: 4,
+
+    // 切换页面后是否自动跳转到页面顶部
+    auto2top: true,
+
+    // 设置首页文件加载路径
+    homepage: '1-1.md',
+
+    // 文档加载的根路径
+    basePath: '/docs/',
+
+    // 链接使用相对路径
+    relativePath: false,
+
+    // 封面页
+    coverpage: false,
+
+    // 在侧边栏中出现的网站图标
+    logo: '',
+
+    // 文档标题
+    name: '慧科云内容管理系统',
+
+    // 点击文档标题后跳转的链接地址
+    nameLink: {
+      '/': '#/',
+    },
+
+    // 定义路由别名
+    alias: {},
+
+    // 可以根据 _sidebar.md 的内容自动为每个页面增加标题
+    autoHeader: false,
+
+    // 执行文档里的 script 标签里的脚本
+    executeScript: true,
+
+    // 小屏设备下合并导航栏到侧边栏
+    mergeNavbar: true,
+
+    // 变量显示文档更新日期
+    formatUpdated: '{YYYY}年{MM}月{DD}日&nbsp;{HH}:{mm}:{ss}',
+
+    // 外部链接的打开方式
+    externalLinkTarget: '_blank',
+
+    // 右上角链接的打开方式
+    cornerExternalLinkTarget: '_blank',
+
+    routerMode: 'hash', // 'hash'，'history'
+
+    // 设置请求资源的请求头
+    requestHeaders: {
+      'cache-control': 'max-age=600',
+    },
+
+    // 在找不到指定页面时加载_404.md
+    notFoundPage: true,
+
+    // 让你的内容页在滚动到指定的锚点时，距离页面顶部有一定空间
+    topMargin: 30, // default: 0
+
+    // 全文搜索
+    search: {
+      maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+      paths: 'auto',
+      placeholder: {
+        '/': '搜索',
+      },
+      noData: {
+        '/': '没有结果!',
+      },
+      // 搜索标题的最大层级, 1 - 6
+      depth: 3,
+      hideOtherSidebarContent: true, // 是否隐藏其他侧边栏内容
+      // 避免搜索索引冲突
+      // 同一域下的多个网站之间
+      namespace: 'website-1',
+
+    },
+
+    // 复制到剪贴板
+    copyCode: {
+      buttonText: {
+        '/': '点击复制'
+      },
+      errorText: {
+        '/': '复制错误'
+      },
+      successText: {
+        '/': '复制成功'
+      }
+    },
+
+    // docsify的分页导航插件
+    pagination: {
+      // 上一个标签的文本
+      previousText: {
+        '/': '上一章节'
+      },
+      // 下一个标签的文本
+      nextText: {
+        '/': '下一章节'
+      },
+      // 允许导航到上一章/下一章
+      crossChapter: true,
+      // 显示章节名称
+      crossChapterText: true,
+    },
+
+    // 字数统计
+    count: {
+      // 设置字符统计展示与否
+      countable: true,
+
+      // 设置展示位置
+      position: 'top',
+
+      // 设置与邻近DOM的距离
+      margin: '-30px',
+
+      // 设置元素对齐
+      float: 'right',
+
+      // 设置字体大小
+      fontsize: '0.9em',
+
+      // 设置颜色
+      color: 'rgb(90,90,90)',
+
+      // 设置语言
+      language: 'chinese',
+
+      // 支持本土化
+      localization: {
+        words: "",
+        minute: ""
+      },
+
+      // 是否显示预计阅读时长
+      isExpected: true,
+
+      // docsify之阅读进度条
+      progress: {
+        position: "top",
+        color: "var(--theme-color,#42b983)",
+        height: "3px",
+      },
+
+    },
+    plugins: [
+      function(hook, vm) {
+        hook.beforeEach(function(html) {
+          const url = 'https://gitee.com/huikeyun/huikeyun-cms-help/edit/master/docs/' + vm.route.file;
+          const editHtml = '[:memo: 编辑文档](' + url + ')\n';
+          const updatTime = '<div class="foot-updat-time" style="margin-top: 100px">:fa-solid fa-clock-rotate-left: 文档更新时间： {docsify-updated}</div>';
+          return (
+            editHtml + html + updatTime
+          );
+        });
+      },
+      function(hook) {
+        const footer = [
+          '<hr/>',
+          '<footer>',
+          '<span><a href="https://13aq.com">慧科云</a> &copy;2023.</span>&emsp;',
+          '<span>Proudly published with <a href="https://github.com/docsifyjs/docsify" target="_blank">docsify</a>.</span>&emsp;',
+          '<a href="https://beian.miit.gov.cn/" target="_blank" class="" rel="link noopener">粤ICP备2022065970号-2</a>',
+          '</footer>'
+        ].join('');
+        hook.afterEach(function(html) {
+          return html + footer;
+        });
+      }
+    ],
+  };
+</script>
+
+<script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-3-M/docsify/4.12.2/docsify.min.js"></script>
+<!-- docsify-darklight-theme -->
+<script src="https://cdn.bootcdn.net/ajax/libs/docsify-darklight-theme/3.2.0/index.min.js"></script>
+<!-- 全文搜索 - Search -->
+<script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-3-M/docsify/4.12.2/plugins/search.min.js"></script>
+
+<script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-3-M/docsify/4.12.2/plugins/front-matter.min.js"></script>
+
+<!-- emoji -->
+<script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-3-M/docsify/4.12.2/plugins/emoji.min.js"></script>
+
+<!-- 外链脚本 - External Script -->
+<script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-3-M/docsify/4.12.2/plugins/external-script.min.js"></script>
+
+<!-- 图片缩放 - Zoom image -->
+<script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-3-M/docsify/4.12.2/plugins/zoom-image.min.js"></script>
+
+<!-- 复制到剪贴板 -->
+<script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-3-M/docsify-copy-code/2.1.1/docsify-copy-code.min.js"></script>
+
+<!-- docsify的分页导航 -->
+<script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+
+<!-- 字数统计 -->
+<script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+
+<!-- 代码高亮 -->
+<script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/prism/9000.0.1/prism.min.js" type="application/javascript"></script>
+
+<!-- Vue -->
+<script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-3-M/vue/3.2.31/vue.global.prod.min.js" type="application/javascript"></script>
+
+<!--docsify之阅读进度条-->
+<script src="https://cdn.jsdelivr.net/npm/docsify-progress@latest/dist/progress.min.js"></script>
+
+<!-- fontawesome -->
+<script src="//unpkg.com/docsify-fontawesome/dist/docsify-fontawesome.min.js"></script>
+
+<!-- docsify-pagination-keyboard-helper -->
+<script src="https://cdn.jsdelivr.net/npm/docsify-pagination-keyboard-helper@latest/dist/bundle.js"></script>
+
+<!-- 自动添加空格 -->
+<script src="//cdn.jsdelivr.net/npm/docsify-pangu/lib/pangu.min.js"></script>
+</body>
+</html>
