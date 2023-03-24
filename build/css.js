@@ -23,15 +23,15 @@ fs.readdir(path.join(__dirname, '../src/themes'), (err, files) => {
             stylusCMD = spawn('node', cmdargs, { shell: true })
 
             stylusCMD.stdout.on('data', (data) => {
-                console.log(`[Stylus Build ] stdout: ${data}`);
+                console.log(`[构建 Stylus] 标准输出: ${data}`);
             });
 
             stylusCMD.stderr.on('data', (data) => {
-                console.error(`[Stylus Build ] stderr: ${data}`);
+                console.error(`[构建 Stylus] 标准错误: ${data}`);
             });
 
             stylusCMD.on('close', (code) => {
-                const message = `[Stylus Build ] child process exited with code ${code}`
+                const message = `[构建 Stylus] 子进程退出代码 ${code}`
 
                 if (code !== 0) {
                   console.error(message);
