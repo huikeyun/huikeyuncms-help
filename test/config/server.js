@@ -109,7 +109,7 @@ if (hasStartArg) {
 }
 // 显示有关手动启动服务器实例的友好消息
 else if (require.main === module) {
-  console.info('Use --start argument to manually start server instance');
+  console.info('使用 --start 参数手动启动服务器实例');
 }
 
 module.exports = {
