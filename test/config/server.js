@@ -43,18 +43,18 @@ function startServer(options = {}, cb = Function.prototype) {
       rule: {
         match: /<\/body>/i,
         fn: function (snippet, match) {
-          // Override changelog alias to load local changelog (see routes)
-          const newSnippet = `
+          // 覆盖变更日志别名以加载本地变更日志（参见路由）
+          return `
             ${snippet.replace(/<script[^>]*/, '$& type="text/plain"')}
             <script>
               (function() {
                 var aliasConfig = (window && window.$docsify && window.$docsify.alias) || {};
-                var isIE = /*@cc_on!@*/false || !!document.documentMode;
+                var isIE = /*@cc_on!@*/!!document.documentMode;
 
-                // Fix /docs site configuration during tests
+                // 在测试期间修复文档站点配置
                 aliasConfig['.*?/changelog'] = '/changelog.md';
 
-                // Enable BrowserSync snippet for non-IE browsers
+                // 为非 IE 浏览器启用 BrowserSync 片段
                 if (!isIE) {
                   document.querySelector('#__bs_script__').removeAttribute('type');
                 }
@@ -62,8 +62,6 @@ function startServer(options = {}, cb = Function.prototype) {
             </script>
             ${match}
           `;
-
-          return newSnippet;
         },
       },
     },
@@ -100,8 +98,7 @@ function stopServer() {
   browserSync.exit();
 }
 
-// Allow starting the test server from the CLI. Useful for viewing test content
-// like fixtures (/index.html)) and local docs site (/docs) used for testing.
+// 像固定装置 (index.html)) 和用于测试的本地文档站点 (docs)。
 if (hasStartArg) {
   startServer({
     open: true,
@@ -110,7 +107,7 @@ if (hasStartArg) {
     startPath: '/docs',
   });
 }
-// Display friendly message about manually starting a server instance
+// 显示有关手动启动服务器实例的友好消息
 else if (require.main === module) {
   console.info('Use --start argument to manually start server instance');
 }
