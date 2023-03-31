@@ -1,7 +1,7 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
-module.exports = {
+const config = {
     // 网站标题。
     title: '慧科云CMS文档',
 
@@ -84,6 +84,216 @@ module.exports = {
     // 服务器的端口。
     // githubPort: '22',
 
+    // 预设配置
+    presets: [
+        [
+            '@docusaurus/preset-classic',
+            {
+                // 调试在开发中默认为 true，在生产中默认为 false。
+                debug: undefined,
+
+                // 将传递给@docusaurus theme经典。
+                theme: {
+                    customCss: [require.resolve('./src/css/custom.css')],
+                },
+
+                // 文档内容插件（false 表示禁用）
+                docs: {
+                    // 文档内容目录的文件系统路径，相对于站点目录。
+                    path: 'docs',
+
+                    // 编辑文档的基础 URL。
+                    // 简单用例: string editUrl
+                    // editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
+                    // 高级用例: functional editUrl
+                    //editUrl: ({versionDocsDirPath, docPath}) => `https://github.com/facebook/docusaurus/edit/main/website/${versionDocsDirPath}/${docPath}`,
+
+                    // 编辑 URL 会指向本地化的文件，而不是原始的未翻译文件。
+                    editLocalizedFiles: false,
+
+                    // 编辑 URL 会永远指向当前版本文档而不是历史版本。
+                    editCurrentVersion: false,
+
+                    // 站点文档部分的 URL 前缀。
+                    routeBasePath: 'docs',
+
+                    // 站点标签列表部分的 URL 前缀。
+                    tagsBasePath: 'tags',
+
+                    // 相对于内容路径的 glob 模式列表，匹配到的 Markdown 文件会被构建。
+                    include: [
+                        '**/*.md',
+                        '**/*.mdx'
+                    ],
+
+                    // Glob 模式列表，匹配到的 Markdown 文件会被排除。
+                    exclude: [
+                        '**!/_*.{js,jsx,ts,tsx,md,mdx}',
+                        '**!/_*!/!**',
+                        '**!/!*.test.{js,jsx,ts,tsx}',
+                        '**!/__tests__/!**',
+                    ],
+
+                    // 侧边栏配置的路径。
+                    sidebarPath: 'sidebars.js',
+
+                    // 侧边栏类别是否默认可折叠。
+                    sidebarCollapsible: true,
+
+                    // 侧边栏类别是否默认被折叠。
+                    sidebarCollapsed: true,
+
+                    // 用于将类型的侧边栏项目替换为实际侧边栏项目（文档、类别、链接等）的功能。
+                    /*async sidebarItemsGenerator({
+                                                  defaultSidebarItemsGenerator,
+                                                  numberPrefixParser,
+                                                  item,
+                                                  version,
+                                                  docs,
+                                                  isCategoryIndex,
+                                                }) {
+                      // 使用提供的数据生成自定义侧边栏切片
+                      return [
+                        {type: 'doc', id: 'intro'},
+                        {
+                          type: 'category',
+                          label: '教程',
+                          items: [
+                            {type: 'doc', id: 'tutorial1'},
+                            {type: 'doc', id: 'tutorial2'},
+                          ],
+                        },
+                      ];
+                    },*/
+
+                    // 自定义从文件名中提取数字前缀的逻辑
+                    /*numberPrefixParser(filename) {
+                      // 实现您自己的逻辑以提取潜在的数字前缀
+                      const numberPrefix = findNumberPrefix(filename);
+                      // 找到前缀：使用清理后的文件名返回
+                      if (numberPrefix) {
+                        return {
+                          numberPrefix,
+                          filename: filename.replace(prefix, ''),
+                        };
+                      }
+                      // 未找到数字前缀
+                      return {numberPrefix: undefined, filename};
+                    },*/
+
+                    // 每个文档页面的根布局组件。
+                    // docLayoutComponent: '@theme/DocPage',
+
+                    // 文档主容器，包括了目录、页面导航等
+                    // docItemComponent: '@theme/DocItem',
+
+                    // 标签列表页的根组件
+                    // docTagsListComponent: '@theme/DocTagsListPage',
+
+                    // 是否显示最后更新文档的作者。
+                    showLastUpdateAuthor: true,
+
+                    // 是否显示最后更新文档的时间。
+                    showLastUpdateTime: true,
+
+                    // 在文档页面上启用或禁用面包屑导航。
+                    breadcrumbs: true,
+
+                    // 即使存在多个版本，也明确禁用分版功能。
+                    // disableVersioning: false,
+
+                    // 包含文档的当前版本。
+                    // includeCurrentVersion: true,
+
+                    // 文档类的导航栏项会默认显示并跳转到的文档版本。
+                    // lastVersion: undefined,
+
+                    // 只包含所有可用版本中的一个子集。
+                    // onlyIncludeVersions: ['current', '1.0.0', '2.0.0'],
+
+                    // 独立自定义每个版本的属性。
+                    /*versions: {
+                      current: {
+                        label: 'Android SDK v2.0.0 (WIP)',
+                        path: 'android-2.0.0',
+                        banner: 'none',
+                      },
+                      '1.0.0': {
+                        label: 'Android SDK v1.0.0',
+                        path: 'android-1.0.0',
+                        banner: 'unmaintained',
+                      },
+                    },*/
+
+                    // remarkPlugins: [require('remark-math')],
+                    // rehypePlugins: [],
+                    // beforeDefaultRemarkPlugins: [],
+                    // beforeDefaultRehypePlugins: [],
+                },
+
+                // 博客内容插件（false 表示禁用）
+                blog: false,
+
+                // 页面内容插件 （false 表示禁用）
+                pages: {
+                    // 文件系统上相对于站点目录的数据路径。此目录中的组件将自动转换为页面。
+                    path: 'src/pages',
+
+                    // 您网站的网页部分的网址路由。不要包含尾部斜杠。
+                    routeBasePath: '/',
+
+                    // 将包含并处理匹配的文件。
+                    include: ['**/*.{js,jsx,ts,tsx,md,mdx}'],
+
+                    // 	不会为匹配文件创建路由。
+                    exclude: [
+                        '**!/_*.{js,jsx,ts,tsx,md,mdx}',
+                        '**!/_*/**',
+                        '**/*.test.{js,jsx,ts,tsx}',
+                        '**/__tests__/**',
+                    ],
+
+                    // 每个 MDX 页面使用的组件。
+                    // mdxPageComponent: '@theme/MDXPage',
+
+                    // 	备注插件传递给 MDX。
+                    // remarkPlugins: [require('remark-math')],
+
+                    // 	Rehype 插件传递给 MDX。
+                    rehypePlugins: [],
+
+                    // 	在默认文档龙备注插件之前传递给 MDX 的自定义备注插件。
+                    beforeDefaultRemarkPlugins: [],
+
+                    //	自定义 Rehype 插件在默认 Docusaurus Rehype 插件之前传递给 MDX。
+                    beforeDefaultRehypePlugins: [],
+                },
+
+                // 站点地图插件（false 表示禁用）
+                sitemap: {
+                    changefreq: 'weekly',
+                    priority: 0.5,
+                    ignorePatterns: ['/tags/**'],
+                    filename: 'sitemap.xml',
+                },
+
+                // 谷歌标签插件（仅在明确指定时启用）
+                gtag: {
+                    // 您的 gtag 服务的跟踪 ID。可以提供多个 ID。
+                    trackingID: 'GTM-KNGLGM9',
+
+                    // 发送请求时是否应匿名化 IP。
+                    anonymizeIP: true,
+                },
+
+                // 将传递给@docusaurusplugin-google-tag-manager（仅在明确指定时启用）
+                googleTagManager: {
+                    // 跟踪代码管理器容器 ID
+                    containerId: 'GTM-KNGLGM9',
+                },
+            },
+        ],
+    ],
     // 用于自定义网站 UI 的主题配置对象，如导航栏和页脚。
     themeConfig: {
         docs: {
@@ -261,185 +471,22 @@ module.exports = {
             // 目录中显示的最大标题级别。
             maxHeadingLevel: 5,
         },
+
+        // 图像缩放插件
+        /* imageZoom: {
+             // 要应用插件的CSS选择器，默认为 '.markdown img'
+             selector: '.markdown img',
+             // 可选的中变焦选项
+             // 看: https://www.npmjs.com/package/medium-zoom#options
+             options: {
+                 margin: 24,
+                 background: '#bada55',
+                 scrollOffset: 0,
+                 container: '#zoom-container',
+                 template: '#zoom-template',
+             },
+         },*/
     },
-
-    plugins: [
-        [
-            // 内容文档插件
-            '@docusaurus/plugin-content-docs',
-            {
-                // 文档内容目录的文件系统路径，相对于站点目录。
-                path: 'docs',
-
-                // 编辑文档的基础 URL。
-                // 简单用例: string editUrl
-                // editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/',
-                // 高级用例: functional editUrl
-                //editUrl: ({versionDocsDirPath, docPath}) => `https://github.com/facebook/docusaurus/edit/main/website/${versionDocsDirPath}/${docPath}`,
-
-                // 编辑 URL 会指向本地化的文件，而不是原始的未翻译文件。
-                editLocalizedFiles: false,
-
-                // 编辑 URL 会永远指向当前版本文档而不是历史版本。
-                editCurrentVersion: false,
-
-                // 站点文档部分的 URL 前缀。
-                routeBasePath: 'docs',
-
-                // 站点标签列表部分的 URL 前缀。
-                tagsBasePath: 'tags',
-
-                // 相对于内容路径的 glob 模式列表，匹配到的 Markdown 文件会被构建。
-                include: [
-                    '**/*.md',
-                    '**/*.mdx'
-                ],
-
-                // Glob 模式列表，匹配到的 Markdown 文件会被排除。
-                exclude: [
-                    '**!/_*.{js,jsx,ts,tsx,md,mdx}',
-                    '**!/_*!/!**',
-                    '**!/!*.test.{js,jsx,ts,tsx}',
-                    '**!/__tests__/!**',
-                ],
-
-                // 侧边栏配置的路径。
-                sidebarPath: 'sidebars.js',
-
-                // 侧边栏类别是否默认可折叠。
-                sidebarCollapsible: true,
-
-                // 侧边栏类别是否默认被折叠。
-                sidebarCollapsed: true,
-
-                // 用于将类型的侧边栏项目替换为实际侧边栏项目（文档、类别、链接等）的功能。
-                /*async sidebarItemsGenerator({
-                                              defaultSidebarItemsGenerator,
-                                              numberPrefixParser,
-                                              item,
-                                              version,
-                                              docs,
-                                              isCategoryIndex,
-                                            }) {
-                  // 使用提供的数据生成自定义侧边栏切片
-                  return [
-                    {type: 'doc', id: 'intro'},
-                    {
-                      type: 'category',
-                      label: '教程',
-                      items: [
-                        {type: 'doc', id: 'tutorial1'},
-                        {type: 'doc', id: 'tutorial2'},
-                      ],
-                    },
-                  ];
-                },*/
-
-                // 自定义从文件名中提取数字前缀的逻辑
-                /*numberPrefixParser(filename) {
-                  // 实现您自己的逻辑以提取潜在的数字前缀
-                  const numberPrefix = findNumberPrefix(filename);
-                  // 找到前缀：使用清理后的文件名返回
-                  if (numberPrefix) {
-                    return {
-                      numberPrefix,
-                      filename: filename.replace(prefix, ''),
-                    };
-                  }
-                  // 未找到数字前缀
-                  return {numberPrefix: undefined, filename};
-                },*/
-
-                // 每个文档页面的根布局组件。
-                // docLayoutComponent: '@theme/DocPage',
-
-                // 文档主容器，包括了目录、页面导航等
-                // docItemComponent: '@theme/DocItem',
-
-                // 标签列表页的根组件
-                // docTagsListComponent: '@theme/DocTagsListPage',
-
-                // 是否显示最后更新文档的作者。
-                showLastUpdateAuthor: true,
-
-                // 是否显示最后更新文档的时间。
-                showLastUpdateTime: true,
-
-                // 在文档页面上启用或禁用面包屑导航。
-                breadcrumbs: true,
-
-                // 即使存在多个版本，也明确禁用分版功能。
-                disableVersioning: false,
-
-                // 包含文档的当前版本。
-                includeCurrentVersion: true,
-
-                // 文档类的导航栏项会默认显示并跳转到的文档版本。
-                lastVersion: undefined,
-
-                // 只包含所有可用版本中的一个子集。
-                // onlyIncludeVersions: ['current', '1.0.0', '2.0.0'],
-
-                // 独立自定义每个版本的属性。
-                /*versions: {
-                  current: {
-                    label: 'Android SDK v2.0.0 (WIP)',
-                    path: 'android-2.0.0',
-                    banner: 'none',
-                  },
-                  '1.0.0': {
-                    label: 'Android SDK v1.0.0',
-                    path: 'android-1.0.0',
-                    banner: 'unmaintained',
-                  },
-                },*/
-
-                // remarkPlugins: [require('remark-math')],
-                // rehypePlugins: [],
-                // beforeDefaultRemarkPlugins: [],
-                // beforeDefaultRehypePlugins: [],
-            },
-
-            // 调试插件
-            process.env.NODE_ENV === 'production' && '@docusaurus/plugin-debug',
-        ].filter(Boolean),
-        // 内容页面插件
-        [
-            '@docusaurus/plugin-content-pages',
-            {
-                // 文件系统上相对于站点目录的数据路径。此目录中的组件将自动转换为页面。
-                path: 'src/pages',
-
-                // 您网站的网页部分的网址路由。不要包含尾部斜杠。
-                routeBasePath: '/',
-
-                // 将包含并处理匹配的文件。
-                include: ['**/*.{js,jsx,ts,tsx,md,mdx}'],
-
-                // 	不会为匹配文件创建路由。
-                exclude: [
-                    '**!/_*.{js,jsx,ts,tsx,md,mdx}',
-                    '**!/_*/**',
-                    '**/*.test.{js,jsx,ts,tsx}',
-                    '**/__tests__/**',
-                ],
-
-                // 每个 MDX 页面使用的组件。
-                mdxPageComponent: '@theme/MDXPage',
-
-                // 	备注插件传递给 MDX。
-                remarkPlugins: [require('remark-math')],
-
-                // 	Rehype 插件传递给 MDX。
-                rehypePlugins: [],
-
-                // 	在默认文档龙备注插件之前传递给 MDX 的自定义备注插件。
-                beforeDefaultRemarkPlugins: [],
-
-                //	自定义 Rehype 插件在默认 Docusaurus Rehype 插件之前传递给 MDX。
-                beforeDefaultRehypePlugins: [],
-            },
-        ],
-    ],
-    themes: ['@docusaurus/theme-classic'],
 }
+
+module.exports = config;
