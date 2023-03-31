@@ -107,7 +107,7 @@ const config = {
                     editCurrentVersion: false,
 
                     // 站点文档部分的 URL 前缀。
-                    routeBasePath: 'docs',
+                    routeBasePath: '/',
 
                     // 站点标签列表部分的 URL 前缀。
                     tagsBasePath: 'tags',
@@ -174,13 +174,13 @@ const config = {
                     },*/
 
                     // 每个文档页面的根布局组件。
-                    // docLayoutComponent: '@theme/DocPage',
+                    docLayoutComponent: '@theme/DocPage',
 
                     // 文档主容器，包括了目录、页面导航等
-                    // docItemComponent: '@theme/DocItem',
+                    docItemComponent: '@theme/DocItem',
 
                     // 标签列表页的根组件
-                    // docTagsListComponent: '@theme/DocTagsListPage',
+                    docTagsListComponent: '@theme/DocTagsListPage',
 
                     // 是否显示最后更新文档的作者。
                     showLastUpdateAuthor: true,
@@ -192,16 +192,19 @@ const config = {
                     breadcrumbs: true,
 
                     // 即使存在多个版本，也明确禁用分版功能。
-                    // disableVersioning: false,
+                    disableVersioning: false,
 
                     // 包含文档的当前版本。
-                    // includeCurrentVersion: true,
+                    includeCurrentVersion: true,
 
                     // 文档类的导航栏项会默认显示并跳转到的文档版本。
-                    // lastVersion: undefined,
+                    lastVersion: undefined,
 
                     // 只包含所有可用版本中的一个子集。
-                    // onlyIncludeVersions: ['current', '1.0.0', '2.0.0'],
+                    /*onlyIncludeVersions: [
+                        'current',
+                        '1.0.0',
+                    ],*/
 
                     // 独立自定义每个版本的属性。
                     /*versions: {
@@ -279,8 +282,7 @@ const config = {
                 },
             },
         ],
-    ],
-    // 用于自定义网站 UI 的主题配置对象，如导航栏和页脚。
+    ], // 用于自定义网站 UI 的主题配置对象，如导航栏和页脚。
     themeConfig: {
         docs: {
             sidebar: {
@@ -432,8 +434,7 @@ const config = {
                 href: 'https://opensource.fb.com',
                 width: 160,
                 height: 51,
-            },
-            // 要显示在底部的版权消息，也支持自定义 HTML。
+            }, // 要显示在底部的版权消息，也支持自定义 HTML。
             // 你也可以在这里放自己的HTML
             copyright: `Copyright © ${new Date().getFullYear()} 慧科云CMS文档`,
             style: 'dark',
