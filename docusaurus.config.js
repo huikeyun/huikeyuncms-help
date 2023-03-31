@@ -399,8 +399,45 @@ module.exports = {
                 // beforeDefaultRemarkPlugins: [],
                 // beforeDefaultRehypePlugins: [],
             },
+
         ],
-        'content-pages',
+        // 内容页面插件
+        [
+            '@docusaurus/plugin-content-pages',
+            {
+                // 文件系统上相对于站点目录的数据路径。此目录中的组件将自动转换为页面。
+                path: 'src/pages',
+
+                // 您网站的网页部分的网址路由。不要包含尾部斜杠。
+                routeBasePath: '/',
+
+                // 将包含并处理匹配的文件。
+                include: ['**/*.{js,jsx,ts,tsx,md,mdx}'],
+
+                // 	不会为匹配文件创建路由。
+                exclude: [
+                    '**!/_*.{js,jsx,ts,tsx,md,mdx}',
+                    '**!/_*/**',
+                    '**/*.test.{js,jsx,ts,tsx}',
+                    '**/__tests__/**',
+                ],
+
+                // 每个 MDX 页面使用的组件。
+                mdxPageComponent: '@theme/MDXPage',
+
+                // 	备注插件传递给 MDX。
+                remarkPlugins: [require('remark-math')],
+
+                // 	Rehype 插件传递给 MDX。
+                rehypePlugins: [],
+
+                // 	在默认文档龙备注插件之前传递给 MDX 的自定义备注插件。
+                beforeDefaultRemarkPlugins: [],
+
+                //	自定义 Rehype 插件在默认 Docusaurus Rehype 插件之前传递给 MDX。
+                beforeDefaultRehypePlugins: [],
+            },
+        ],
     ],
     themes: ['@docusaurus/theme-classic'],
 }
