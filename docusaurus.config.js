@@ -20,7 +20,7 @@ const config = {
     trailingSlash: true,
 
     // 用于本地化站点的 i18n 配置对象。
-    i18n: {
+    /*i18n: {
         // 没有其名称的区域设置将用于标记docusaurus start--locale<link hrefLang="x-default">
         defaultLocale: 'zh-Hans',
 
@@ -52,7 +52,7 @@ const config = {
                 path: 'en',
             }
         },
-    },
+    },*/
 
     // 此选项添加到每个页面，以告诉搜索引擎避免将您的网站编入索引。
     noIndex: false, // 默认为 'false'
@@ -278,13 +278,7 @@ const config = {
                 },
 
                 // 谷歌标签插件（仅在明确指定时启用）
-                gtag: {
-                    // 您的 gtag 服务的跟踪 ID。可以提供多个 ID。
-                    trackingID: 'GTM-KNGLGM9',
-
-                    // 发送请求时是否应匿名化 IP。
-                    anonymizeIP: true,
-                },
+                gtag: false,
 
                 // 将传递给@docusaurusplugin-google-tag-manager（仅在明确指定时启用）
                 googleTagManager: {
@@ -473,20 +467,24 @@ const config = {
         },
 
         // 图像缩放插件
-        /* imageZoom: {
-             // 要应用插件的CSS选择器，默认为 '.markdown img'
-             selector: '.markdown img',
-             // 可选的中变焦选项
-             // 看: https://www.npmjs.com/package/medium-zoom#options
-             options: {
-                 margin: 24,
-                 background: '#bada55',
-                 scrollOffset: 0,
-                 container: '#zoom-container',
-                 template: '#zoom-template',
-             },
-         },*/
+        /*imageZoom: {
+            // 要应用插件的CSS选择器，默认为 '.markdown img'
+            selector: '.markdown img',
+            // 可选的中变焦选项
+            // 看: https://www.npmjs.com/package/medium-zoom#options
+            options: {
+                margin: 24,
+                background: '#bada55',
+                scrollOffset: 0,
+                container: '#zoom-container',
+                template: '#zoom-template',
+            },
+        },*/
     },
+    plugins: [
+        // 图像缩放插件
+        //'plugin-image-zoom',
+    ],
 }
 
 module.exports = config;
