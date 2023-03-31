@@ -22,14 +22,13 @@ const config = {
     trailingSlash: true,
 
     // 用于本地化站点的 i18n 配置对象。
-    /*i18n: {
+    i18n: {
         // 没有其名称的区域设置将用于标记docusaurus start--locale<link hrefLang="x-default">
         defaultLocale: 'zh-Hans',
 
         // 站点上部署的区域设置列表。
         locales: [
             'zh-Hans',
-            'en'
         ],
 
         // 所有区域设置文件夹都相对于的根文件夹。
@@ -37,24 +36,15 @@ const config = {
 
         // 每个区域设置的单独选项。
         localeConfigs: {
-            en: {
-                // 在区域设置下拉列表中为此区域设置显示的标签。
-                label: 'English',
-
-                // 用于选择区域设置的 CSS 和 HTML 元属性。
+            'zh-Hans': {
+                label: 'zh-Hans',
                 direction: 'ltr',
-
-                // BCP 47 语言标记，用于（或任何其他 DOM 标记名称）
-                htmlLang: 'en-US',
-
-                // 用于计算日期纪元的日历。
+                htmlLang: 'zh-Hans-CN',
                 calendar: 'gregory',
-
-                // 此区域设置的所有插件本地化文件夹相对于的根文件夹。
-                path: 'en',
-            }
+                path: 'zh-Hans',
+            },
         },
-    },*/
+    },
 
     // 此选项添加到每个页面，以告诉搜索引擎避免将您的网站编入索引。
     noIndex: false, // 默认为 'false'
@@ -94,9 +84,9 @@ const config = {
                 // 调试在开发中默认为 true，在生产中默认为 false。
                 debug: undefined,
 
-                // 将传递给@docusaurus theme经典。
+                // 全局样式。
                 theme: {
-                    customCss: [require.resolve('./src/css/custom.css')],
+                    customCss: [require.resolve('./src/css/custom.scss')],
                 },
 
                 // 文档内容插件（false 表示禁用）
@@ -469,23 +459,19 @@ const config = {
         },
 
         // 图像缩放插件
-        /*imageZoom: {
-            // 要应用插件的CSS选择器，默认为 '.markdown img'
-            selector: '.markdown img',
-            // 可选的中变焦选项
-            // 看: https://www.npmjs.com/package/medium-zoom#options
-            options: {
-                margin: 24,
-                background: '#bada55',
-                scrollOffset: 0,
-                container: '#zoom-container',
-                template: '#zoom-template',
+        zoom: {
+            selector: '.markdown :not(em) > img',
+            background: {
+                light: 'rgb(255, 255, 255)',
+                dark: 'rgb(50, 50, 50)',
             },
-        },*/
+            config: {},
+        },
     },
     plugins: [
         // 图像缩放插件
-        //'plugin-image-zoom',
+        'docusaurus-plugin-image-zoom',
+        'docusaurus-plugin-sass'
     ],
 }
 
