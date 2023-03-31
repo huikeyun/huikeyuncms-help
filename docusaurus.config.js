@@ -1,5 +1,7 @@
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const math = require('remark-math');
+const katex = require('rehype-katex');
 
 const config = {
     // 网站标题。
@@ -225,8 +227,8 @@ const config = {
                       },
                     },*/
 
-                    // remarkPlugins: [require('remark-math')],
-                    // rehypePlugins: [],
+                    remarkPlugins: [math],
+                    rehypePlugins: [katex],
                     // beforeDefaultRemarkPlugins: [],
                     // beforeDefaultRehypePlugins: [],
                 },
