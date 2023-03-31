@@ -174,7 +174,7 @@ const config = {
                     },*/
 
                     // 每个文档页面的根布局组件。
-                    docLayoutComponent: '@theme/DocPage',
+                    //docLayoutComponent: '@theme/DocPage',
 
                     // 文档主容器，包括了目录、页面导航等
                     docItemComponent: '@theme/DocItem',
