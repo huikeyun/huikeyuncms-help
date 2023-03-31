@@ -400,7 +400,9 @@ module.exports = {
                 // beforeDefaultRehypePlugins: [],
             },
 
-        ],
+            // 调试插件
+            process.env.NODE_ENV === 'production' && '@docusaurus/plugin-debug',
+        ].filter(Boolean),
         // 内容页面插件
         [
             '@docusaurus/plugin-content-pages',
