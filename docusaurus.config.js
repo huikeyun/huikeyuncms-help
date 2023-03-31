@@ -1,3 +1,6 @@
+const lightCodeTheme = require('prism-react-renderer/themes/github');
+const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+
 module.exports = {
     // 网站标题。
     title: '慧科云CMS文档',
@@ -17,30 +20,39 @@ module.exports = {
     trailingSlash: true,
 
     // 用于本地化站点的 i18n 配置对象。
-    /*i18n: {
+    i18n: {
         // 没有其名称的区域设置将用于标记docusaurus start--locale<link hrefLang="x-default">
         defaultLocale: 'zh-Hans',
-        
+
         // 站点上部署的区域设置列表。
-        locales: ['zh-Hans'],
-        
+        locales: [
+            'zh-Hans',
+            'en'
+        ],
+
         // 所有区域设置文件夹都相对于的根文件夹。
         path: 'i18n',
-        
+
         // 每个区域设置的单独选项。
         localeConfigs: {
             en: {
                 // 在区域设置下拉列表中为此区域设置显示的标签。
                 label: 'English',
-                
+
                 // 用于选择区域设置的 CSS 和 HTML 元属性。
                 direction: 'ltr',
+
+                // BCP 47 语言标记，用于（或任何其他 DOM 标记名称）
                 htmlLang: 'en-US',
+
+                // 用于计算日期纪元的日历。
                 calendar: 'gregory',
+
+                // 此区域设置的所有插件本地化文件夹相对于的根文件夹。
                 path: 'en',
             }
         },
-    },*/
+    },
 
     // 此选项添加到每个页面，以告诉搜索引擎避免将您的网站编入索引。
     noIndex: false, // 默认为 'false'
@@ -156,23 +168,22 @@ module.exports = {
             // 导航栏项。
             items: [
                 {
-                    // 将此导航栏项的类型设置为边栏的第一个文档。。
+                    // 将此导航栏项的类型设置为边栏的第一个文档。
                     type: 'docSidebar',
 
                     // 要为此项目显示的名称。
                     label: '文档',
 
                     // 客户端路由，用于在网站内导航。
+                    // 只应使用 'to' 或 'href' 中的一个
+                    // href: 'https://www.facebook.com',
                     to: 'docs',
-
-                    // 整页导航，用于在网站外部导航。只应使用其中一个 to 或 href。
-                    // href:'',
 
                     // 此项应显示在导航栏的一侧。
                     position: 'left',
 
                     // 此项目链接到的边栏的 ID。
-                    // sidebarId: '',
+                    sidebarId: 'tutorialSidebar',
 
                     // 自定义 CSS 类
                     className: 'slide-class',
@@ -204,19 +215,21 @@ module.exports = {
                 },*/
             ],
         },
+
+        // 主题
+        prism: {
+            theme: lightCodeTheme,
+
+            // 深色模式主题
+            darkTheme: darkCodeTheme,
+
+            // 默认语言
+            defaultLanguage: 'Markup',
+        },
+
+        // 页脚
         footer: {
-            style: 'dark',
-            links: [
-                {
-                    title: 'Docs',
-                    items: [
-                        {
-                            label: 'Docs',
-                            to: 'docs/doc1',
-                        },
-                    ],
-                }, // ... other links
-            ],
+            // 徽标对象的自定义。
             logo: {
                 alt: 'Meta Open Source Logo',
                 src: 'img/meta_oss_logo.png',
@@ -224,12 +237,35 @@ module.exports = {
                 width: 160,
                 height: 51,
             },
-            copyright: `Copyright © ${new Date().getFullYear()} Facebook, Inc.`, // You can also put own HTML here
+            // 要显示在底部的版权消息，也支持自定义 HTML。
+            // 你也可以在这里放自己的HTML
+            copyright: `Copyright © ${new Date().getFullYear()} 慧科云CMS文档`,
+            style: 'dark',
+            links: [
+                {
+                    label: '粤ICP备2022065970号-1',
+                    href: 'https://beian.miit.gov.cn/',
+                },
+                {
+                    label: '基于 Docusaurus 构建',
+                    href: 'https://twitter.com/docusaurus',
+                },
+            ],
+        },
+
+        // 目录
+        tableOfContents: {
+            // 目录中显示的最低标题级别。
+            minHeadingLevel: 2,
+
+            // 目录中显示的最大标题级别。
+            maxHeadingLevel: 5,
         },
     },
 
     plugins: [
         [
+            // 内容文档插件
             '@docusaurus/plugin-content-docs',
             {
                 // 文档内容目录的文件系统路径，相对于站点目录。
