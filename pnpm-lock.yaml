@@ -4,7 +4,6 @@ specifiers:
   '@docusaurus/core': 0.0.0-5532
   '@docusaurus/module-type-aliases': 2.4.0
   '@docusaurus/preset-classic': 0.0.0-5532
-  '@fortawesome/fontawesome-free': ^6.4.0
   '@fortawesome/fontawesome-svg-core': ^6.4.0
   '@fortawesome/free-brands-svg-icons': ^6.4.0
   '@fortawesome/free-regular-svg-icons': ^6.4.0
@@ -26,7 +25,6 @@ specifiers:
 dependencies:
   '@docusaurus/core': 0.0.0-5532_vv7idnodpbgd3rtj3x7h2folia
   '@docusaurus/preset-classic': 0.0.0-5532_vv7idnodpbgd3rtj3x7h2folia
-  '@fortawesome/fontawesome-free': 6.4.0
   '@fortawesome/fontawesome-svg-core': 6.4.0
   '@fortawesome/free-brands-svg-icons': 6.4.0
   '@fortawesome/free-regular-svg-icons': 6.4.0
@@ -270,8 +268,8 @@ packages:
       semver: 6.3.0
     dev: false
 
-  /@babel/helper-create-class-features-plugin/7.21.0_@babel+core@7.21.4:
-    resolution: {integrity: sha512-Q8wNiMIdwsv5la5SPxNYzzkPnjgC0Sy0i7jLkVOCdllu/xcVNkr3TeZzbHBJrj+XXRqzX5uCyCoV9eu6xUG7KQ==}
+  /@babel/helper-create-class-features-plugin/7.21.4_@babel+core@7.21.4:
+    resolution: {integrity: sha512-46QrX2CQlaFRF4TkwfTt6nJD7IHq8539cCL7SDpqWSDeJKY1xylKKY5F/33mJhLZ3mFvKv2gGrVS6NkyF6qs+Q==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0
@@ -289,8 +287,8 @@ packages:
       - supports-color
     dev: false
 
-  /@babel/helper-create-regexp-features-plugin/7.21.0_@babel+core@7.21.4:
-    resolution: {integrity: sha512-N+LaFW/auRSWdx7SHD/HiARwXQju1vXTW4fKr4u5SgBUTm51OKEjKgj+cs00ggW3kEvNqwErnlwuq7Y3xBe4eg==}
+  /@babel/helper-create-regexp-features-plugin/7.21.4_@babel+core@7.21.4:
+    resolution: {integrity: sha512-M00OuhU+0GyZ5iBBN9czjugzWrEq2vDpf/zCYHxxf93ul/Q5rv+a5h+/+0WnI1AebHNVtl5bFV0qsJoH23DbfA==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0
@@ -538,7 +536,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.21.4
-      '@babel/helper-create-class-features-plugin': 7.21.0_@babel+core@7.21.4
+      '@babel/helper-create-class-features-plugin': 7.21.4_@babel+core@7.21.4
       '@babel/helper-plugin-utils': 7.20.2
     transitivePeerDependencies:
       - supports-color
@@ -551,7 +549,7 @@ packages:
       '@babel/core': ^7.12.0
     dependencies:
       '@babel/core': 7.21.4
-      '@babel/helper-create-class-features-plugin': 7.21.0_@babel+core@7.21.4
+      '@babel/helper-create-class-features-plugin': 7.21.4_@babel+core@7.21.4
       '@babel/helper-plugin-utils': 7.20.2
       '@babel/plugin-syntax-class-static-block': 7.14.5_@babel+core@7.21.4
     transitivePeerDependencies:
@@ -679,7 +677,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.21.4
-      '@babel/helper-create-class-features-plugin': 7.21.0_@babel+core@7.21.4
+      '@babel/helper-create-class-features-plugin': 7.21.4_@babel+core@7.21.4
       '@babel/helper-plugin-utils': 7.20.2
     transitivePeerDependencies:
       - supports-color
@@ -693,7 +691,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.4
       '@babel/helper-annotate-as-pure': 7.18.6
-      '@babel/helper-create-class-features-plugin': 7.21.0_@babel+core@7.21.4
+      '@babel/helper-create-class-features-plugin': 7.21.4_@babel+core@7.21.4
       '@babel/helper-plugin-utils': 7.20.2
       '@babel/plugin-syntax-private-property-in-object': 7.14.5_@babel+core@7.21.4
     transitivePeerDependencies:
@@ -707,7 +705,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.21.4
-      '@babel/helper-create-regexp-features-plugin': 7.21.0_@babel+core@7.21.4
+      '@babel/helper-create-regexp-features-plugin': 7.21.4_@babel+core@7.21.4
       '@babel/helper-plugin-utils': 7.20.2
     dev: false
 
@@ -980,7 +978,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.21.4
-      '@babel/helper-create-regexp-features-plugin': 7.21.0_@babel+core@7.21.4
+      '@babel/helper-create-regexp-features-plugin': 7.21.4_@babel+core@7.21.4
       '@babel/helper-plugin-utils': 7.20.2
     dev: false
 
@@ -1109,7 +1107,7 @@ packages:
       '@babel/core': ^7.0.0
     dependencies:
       '@babel/core': 7.21.4
-      '@babel/helper-create-regexp-features-plugin': 7.21.0_@babel+core@7.21.4
+      '@babel/helper-create-regexp-features-plugin': 7.21.4_@babel+core@7.21.4
       '@babel/helper-plugin-utils': 7.20.2
     dev: false
 
@@ -1318,7 +1316,7 @@ packages:
     dependencies:
       '@babel/core': 7.21.4
       '@babel/helper-annotate-as-pure': 7.18.6
-      '@babel/helper-create-class-features-plugin': 7.21.0_@babel+core@7.21.4
+      '@babel/helper-create-class-features-plugin': 7.21.4_@babel+core@7.21.4
       '@babel/helper-plugin-utils': 7.20.2
       '@babel/plugin-syntax-typescript': 7.21.4_@babel+core@7.21.4
     transitivePeerDependencies:
@@ -1342,7 +1340,7 @@ packages:
       '@babel/core': ^7.0.0-0
     dependencies:
       '@babel/core': 7.21.4
-      '@babel/helper-create-regexp-features-plugin': 7.21.0_@babel+core@7.21.4
+      '@babel/helper-create-regexp-features-plugin': 7.21.4_@babel+core@7.21.4
       '@babel/helper-plugin-utils': 7.20.2
     dev: false
 
@@ -1648,7 +1646,7 @@ packages:
       wait-on: 7.0.1
       webpack: 5.77.0
       webpack-bundle-analyzer: 4.8.0
-      webpack-dev-server: 4.13.1_webpack@5.77.0
+      webpack-dev-server: 4.13.2_webpack@5.77.0
       webpack-merge: 5.8.0
       webpackbar: 5.0.2_webpack@5.77.0
     transitivePeerDependencies:
@@ -1748,7 +1746,7 @@ packages:
       wait-on: 7.0.1
       webpack: 5.77.0
       webpack-bundle-analyzer: 4.8.0
-      webpack-dev-server: 4.13.1_webpack@5.77.0
+      webpack-dev-server: 4.13.2_webpack@5.77.0
       webpack-merge: 5.8.0
       webpackbar: 5.0.2_webpack@5.77.0
     transitivePeerDependencies:
@@ -2572,12 +2570,6 @@ packages:
     requiresBuild: true
     dev: false
 
-  /@fortawesome/fontawesome-free/6.4.0:
-    resolution: {integrity: sha512-0NyytTlPJwB/BF5LtRV8rrABDbe3TdTXqNB3PdZ+UUUZAEIrdOJdmABqKjt4AXwIoJNaRVVZEXxpNrqvE1GAYQ==}
-    engines: {node: '>=6'}
-    requiresBuild: true
-    dev: false
-
   /@fortawesome/fontawesome-svg-core/6.4.0:
     resolution: {integrity: sha512-Bertv8xOiVELz5raB2FlXDPKt+m94MQ3JgDfsVbrqNpLU9+UE2E18GKjLKw+d3XbeYPqg1pzyQKGsrzbw+pPaw==}
     engines: {node: '>=6'}
@@ -3138,7 +3130,7 @@ packages:
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.3
-      csstype: 3.1.1
+      csstype: 3.1.2
 
   /@types/retry/0.12.0:
     resolution: {integrity: sha512-wWKOClTTiizcZhXnPY4wikVAwmdYHp8q6DmC+EJUzAMsycb7HB32Kh9RN4+0gExjmPmZSAQjgURXIGATPegAvA==}
@@ -3685,7 +3677,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001473
-      electron-to-chromium: 1.4.347
+      electron-to-chromium: 1.4.348
       node-releases: 2.0.10
       update-browserslist-db: 1.0.10_browserslist@4.21.5
 
@@ -4332,8 +4324,8 @@ packages:
       css-tree: 1.1.3
     dev: false
 
-  /csstype/3.1.1:
-    resolution: {integrity: sha512-DJR/VvkAvSZW9bTouZue2sSxDwdTN92uHjqeKVm+0dAqdfNykRzQ95tay8aXMBAAPpUiq4Qcug2L7neoRh2Egw==}
+  /csstype/3.1.2:
+    resolution: {integrity: sha512-I7K1Uu0MBPzaFKg4nI5Q7Vs2t+3gWWW648spaF+Rg7pI9ds18Ugn+lvg4SHczUdKlHI5LWBXyqfS8+DufyBsgQ==}
 
   /debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
@@ -4586,8 +4578,8 @@ packages:
     resolution: {integrity: sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==}
     dev: false
 
-  /electron-to-chromium/1.4.347:
-    resolution: {integrity: sha512-LNi3+/9nV0vT6Bz1OsSoZ/w7IgNuWdefZ7mjKNjZxyRlI/ag6uMXxsxAy5Etvuixq3Q26exw2fc4bNYvYQqXSw==}
+  /electron-to-chromium/1.4.348:
+    resolution: {integrity: sha512-gM7TdwuG3amns/1rlgxMbeeyNoBFPa+4Uu0c7FeROWh4qWmvSOnvcslKmWy51ggLKZ2n/F/4i2HJ+PVNxH9uCQ==}
 
   /emoji-regex/8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -8553,8 +8545,8 @@ packages:
       webpack: 5.77.0
     dev: false
 
-  /webpack-dev-server/4.13.1_webpack@5.77.0:
-    resolution: {integrity: sha512-5tWg00bnWbYgkN+pd5yISQKDejRBYGEw15RaEEslH+zdbNDxxaZvEAO2WulaSaFKb5n3YG8JXsGaDsut1D0xdA==}
+  /webpack-dev-server/4.13.2_webpack@5.77.0:
+    resolution: {integrity: sha512-5i6TrGBRxG4vnfDpB6qSQGfnB6skGBXNL5/542w2uRGLimX6qeE5BQMLrzIC3JYV/xlGOv+s+hTleI9AZKUQNw==}
     engines: {node: '>= 12.13.0'}
     hasBin: true
     peerDependencies:

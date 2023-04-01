@@ -6,5 +6,9 @@
   "sidebar.tutorialSidebar.category.新手入门": {
     "message": "新手入门",
     "description": "The label for category 新手入门 in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.环境配置": {
+    "message": "环境配置",
+    "description": "The label for category 环境配置 in sidebar tutorialSidebar"
   }
 }
