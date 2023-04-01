@@ -28,7 +28,8 @@ const config = {
 
         // 站点上部署的区域设置列表。
         locales: [
-            'zh-Hans',
+            'en',
+            'zh-Hans'
         ],
 
         // 所有区域设置文件夹都相对于的根文件夹。
@@ -37,11 +38,10 @@ const config = {
         // 每个区域设置的单独选项。
         localeConfigs: {
             'zh-Hans': {
-                label: 'zh-Hans',
-                direction: 'ltr',
-                htmlLang: 'zh-Hans-CN',
-                calendar: 'gregory',
-                path: 'zh-Hans',
+                htmlLang: 'zh-Hans',
+            },
+            en: {
+                htmlLang: 'en-GB',
             },
         },
     },
@@ -220,8 +220,17 @@ const config = {
                       },
                     },*/
 
+                    // 备注插件传递给 MDX。
                     remarkPlugins: [math],
-                    rehypePlugins: [katex],
+
+                    // Rehype 插件传递给 MDX。
+                    rehypePlugins: [
+                        [
+                            katex,
+                            {strict: false}
+                        ],
+                    ],
+
                     // beforeDefaultRemarkPlugins: [],
                     // beforeDefaultRehypePlugins: [],
                 },
@@ -252,10 +261,15 @@ const config = {
                     // mdxPageComponent: '@theme/MDXPage',
 
                     // 	备注插件传递给 MDX。
-                    // remarkPlugins: [require('remark-math')],
+                    remarkPlugins: [math],
 
                     // 	Rehype 插件传递给 MDX。
-                    rehypePlugins: [],
+                    rehypePlugins: [
+                        [
+                            katex,
+                            {strict: false}
+                        ],
+                    ],
 
                     // 	在默认文档龙备注插件之前传递给 MDX 的自定义备注插件。
                     beforeDefaultRemarkPlugins: [],
@@ -366,22 +380,16 @@ const config = {
             // 导航栏项。
             items: [
                 {
-                    // 将此导航栏项的类型设置为边栏的第一个文档。
-                    type: 'docSidebar',
-
                     // 要为此项目显示的名称。
                     label: '文档',
 
                     // 客户端路由，用于在网站内导航。
                     // 只应使用 'to' 或 'href' 中的一个
                     // href: 'https://www.facebook.com',
-                    to: 'docs',
+                    to: '/新手入门/慧科云CMS介绍',
 
                     // 此项应显示在导航栏的一侧。
                     position: 'left',
-
-                    // 此项目链接到的边栏的 ID。
-                    sidebarId: 'tutorialSidebar',
 
                     // 自定义 CSS 类
                     className: 'slide-class',
@@ -416,9 +424,10 @@ const config = {
 
         // 主题
         prism: {
+            // 浅色模式主题
             theme: lightCodeTheme,
 
-            // 深色模式主题
+            // 暗黑模式主题
             darkTheme: darkCodeTheme,
 
             // 默认语言
