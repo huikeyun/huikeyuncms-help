@@ -17,9 +17,8 @@ const config = {
     // 必须是可以在链接的 href 中使用的 URL。
     favicon: 'img/favicon.ico',
 
-    // 允许自定义 URL/链接末尾是否存在尾部斜杠，
-    // 以及如何生成静态 HTML 文件。
-    trailingSlash: true,
+    // 允许自定义 URL/链接末尾是否存在尾部斜杠，以及如何生成静态 HTML 文件。
+    trailingSlash: undefined,
 
     // 用于本地化站点的 i18n 配置对象。
     i18n: {
@@ -36,14 +35,6 @@ const config = {
         path: 'i18n',
 
         // 每个区域设置的单独选项。
-        localeConfigs: {
-            'zh-Hans': {
-                htmlLang: 'zh-Hans',
-            },
-            en: {
-                htmlLang: 'en-GB',
-            },
-        },
     },
 
     // 此选项添加到每个页面，以告诉搜索引擎避免将您的网站编入索引。
@@ -107,7 +98,7 @@ const config = {
                     editCurrentVersion: false,
 
                     // 站点文档部分的 URL 前缀。
-                    routeBasePath: '/',
+                    routeBasePath: 'docs',
 
                     // 站点标签列表部分的 URL 前缀。
                     tagsBasePath: 'tags',
@@ -133,7 +124,7 @@ const config = {
                     sidebarCollapsible: true,
 
                     // 侧边栏类别是否默认被折叠。
-                    sidebarCollapsed: true,
+                    sidebarCollapsed: false,
 
                     // 用于将类型的侧边栏项目替换为实际侧边栏项目（文档、类别、链接等）的功能。
                     /*async sidebarItemsGenerator({
@@ -231,8 +222,8 @@ const config = {
                         ],
                     ],
 
-                    // beforeDefaultRemarkPlugins: [],
-                    // beforeDefaultRehypePlugins: [],
+                    beforeDefaultRemarkPlugins: [],
+                    beforeDefaultRehypePlugins: [],
                 },
 
                 // 博客内容插件（false 表示禁用）
@@ -258,7 +249,7 @@ const config = {
                     ],
 
                     // 每个 MDX 页面使用的组件。
-                    // mdxPageComponent: '@theme/MDXPage',
+                    mdxPageComponent: '@theme/MDXPage',
 
                     // 	备注插件传递给 MDX。
                     remarkPlugins: [math],
@@ -386,7 +377,7 @@ const config = {
                     // 客户端路由，用于在网站内导航。
                     // 只应使用 'to' 或 'href' 中的一个
                     // href: 'https://www.facebook.com',
-                    to: '/新手入门/慧科云CMS介绍',
+                    to: '/docs/新手入门/慧科云CMS介绍',
 
                     // 此项应显示在导航栏的一侧。
                     position: 'left',
