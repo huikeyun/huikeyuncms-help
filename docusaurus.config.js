@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2023. 慧科云
  * 此源代码根据 MIT 许可证进行许可，该许可证位于此源代码树根目录中的 LICENSE 文件中。
- * 最后修改时间：2023/4/2 下午8:28
+ * 最后修改时间：2023/4/2 下午9:39
  */
 
 /** @type {import("@docusaurus/types").Config} */
@@ -9,19 +9,17 @@ const config = {
     title: '慧科云CMS帮助文档', // 网站标题。
     tagline: '著作权登记号：2022SR1480776', // 网站的标语。
     favicon: 'favicon.ico', // 必须是可以在链接的 href 中使用的 URL。
-
     url: 'https://help.13aq.com', // 在此处设置您网站的生产网址
-    baseUrl: '/', // 站点的路径名; 对于 GitHub 页面部署，它通常是 <projectName>
-
+    baseUrl: '/', // 站点的路径名; 对于 GitHub 页面部署，它通常是 <projectName
     staticDirectories: ['public', 'static'], // 静态资源
+
     // GitHub 页面部署配置。
     // 如果您不使用 GitHub 页面，则不需要这些页面。
     organizationName: 'huikeyun', // 通常是您的 GitHub 组织用户名。
     projectName: 'huikeyuncms-help', // 通常是您的存储库名称。
-
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
-
+    // themes: ['@docusaurus/theme-search-algolia'],
     trailingSlash: false, // 允许自定义 URL/链接末尾是否存在尾部斜杠，以及如何生成静态 HTML 文件。
 
     // 用于本地化站点的 i18n 配置对象。
@@ -213,6 +211,37 @@ const config = {
                 config: {},
             },
         }),
+
+    // Algolia 插件
+    /* algolia: {
+        // Algolia 提供的应用程序 ID
+        appId: 'YOUR_APP_ID',
+
+        // 公共 API 密钥：提交它是安全的
+        apiKey: 'YOUR_SEARCH_API_KEY',
+
+        indexName: 'YOUR_INDEX_NAME',
+
+        // 可选：上下文搜索
+        contextualSearch: true,
+
+        // 可选：指定导航应通过 window.location 而不是在 history.push 上进行导航的域。当我们的 Algolia 配置抓取多个文档站点并且我们希望使用 window.location.href 导航到它们时很有用。
+        externalUrlRegex: 'external\\.com|domain\\.com',
+
+        // 可选：替换来自 Algolia 的部分项目 URL。当使用不同的 baseURL 对多个部署使用相同的搜索索引时很有用。您可以在“from”参数中使用正则表达式或字符串。例如：localhost：3000 vs myCompany.comdocs
+        replaceSearchResultPathname: {
+            from: '/', // or as RegExp: /\/docs\//
+            to: '/',
+        },
+
+        // 可选：Algolia 搜索参数
+        searchParameters: {},
+
+        // 可选：默认启用的搜索页面的路径（“false”表示禁用它）
+        searchPagePath: 'search',
+
+        //... 其他 Algolia 参数
+    }, */
 
     // 插件
     plugins: [
