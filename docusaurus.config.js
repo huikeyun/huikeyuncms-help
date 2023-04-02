@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2023. 慧科云
  * 此源代码根据 MIT 许可证进行许可，该许可证位于此源代码树根目录中的 LICENSE 文件中。
- * 最后修改时间：2023/4/2 下午4:41
+ * 最后修改时间：2023/4/2 下午4:44
  */
 // @ts-check
 // 注意：类型注释允许类型检查和 IDE 自动完成
@@ -123,20 +123,20 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Learn',
+            title: '学习',
             items: [
               {
-                label: 'Style Guide',
+                label: '风格指南',
                 href: 'https://docusaurus.io',
               },
               {
-                label: 'Second Doc',
+                label: '第二个文档',
                 href: 'https://docusaurus.community/',
               },
             ],
           },
           {
-            title: 'Community',
+            title: '社区',
             items: [
               {
                 label: 'Stack Overflow',
@@ -153,7 +153,7 @@ const config = {
             ],
           },
           {
-            title: 'More',
+            title: '更多',
             items: [
               {
                 label: 'GitHub',
@@ -162,7 +162,7 @@ const config = {
             ],
           },
           {
-            title: 'Legal', // 请不要删除隐私和条款，这是法律要求。
+            title: '法律', // 请不要删除隐私和条款，这是法律要求。
             items: [
               {
                 label: '隐私',
