@@ -3,8 +3,9 @@ description: 开启php的curl扩展
 keywords:
   - curl
   - php扩展
+draft: false
 last_update:
-    date: 2023-4-2 17:37:36
+    date: 2023-4-3 05:57:27
     author: 慧科云
 ---
 # php开启curl扩展

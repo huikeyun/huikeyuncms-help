@@ -4,8 +4,9 @@ description: 检测 PHP 环境是否满足系统要求
 keywords:
   - PHP探针
   - PHP环境
+draft: false
 last_update:
-    date: 2023-4-1 16:52:37
+    date: 2023-4-3 05:57:27
     author: 慧科云
 ---
 # PHP 环境侦探工具

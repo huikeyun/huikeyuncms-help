@@ -1,13 +1,13 @@
 ---
 description: 修改PHP配置
 keywords:
-  - cms
-  - 内容管理系统
+  - php配置文件
+  - php.ini
+draft: false
 last_update:
-    date: 2023-4-2 17:37:36
+    date: 2023-4-3 05:57:27
     author: 慧科云
 ---
-
 # php.ini 配置
 
 :::caution 注意
