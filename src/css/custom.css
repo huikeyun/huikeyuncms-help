@@ -1,19 +1,15 @@
-/**
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @format
+/*
+ * Copyright (c) 2023. 慧科云
+ * 此源代码根据 MIT 许可证进行许可，该许可证位于此源代码树根目录中的 LICENSE 文件中。
+ * 最后修改时间：2023/4/2 下午5:01
  */
 
+
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * 此处包含的任何 CSS 都将是全局的。默认情况下，经典模板捆绑了Infima。Infima是一个CSS框架，旨在很好地适用于以内容为中心的网站。
  */
 
-/* You can override the default Infima variables here. */
+/* 您可以在此处覆盖默认的 Infima 变量。 */
 :root {
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;

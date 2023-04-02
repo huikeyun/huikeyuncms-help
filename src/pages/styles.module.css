@@ -1,22 +1,19 @@
-/**
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
- *
- * @format
+/*
+ * Copyright (c) 2023. 慧科云
+ * 此源代码根据 MIT 许可证进行许可，该许可证位于此源代码树根目录中的 LICENSE 文件中。
+ * 最后修改时间：2023/4/2 下午5:04
  */
 
+
 /**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
+ * 带有 .module.css 后缀的 CSS 文件将被视为 CSS 模块并在本地限定范围。
  */
 
 .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
   position: relative;
   overflow: hidden;
+  padding: 4rem 0;
+  text-align: center;
 }
 
 @media screen and (max-width: 996px) {
@@ -34,11 +31,11 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
   width: 100%;
+  padding: 2rem 0;
 }
 
 .featureImage {
-  height: 200px;
   width: 200px;
+  height: 200px;
 }

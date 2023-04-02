@@ -1,8 +1,7 @@
-/**
- * Copyright (c) Meta Platforms, Inc. and affiliates.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
+/*
+ * Copyright (c) 2023. 慧科云
+ * 此源代码根据 MIT 许可证进行许可，该许可证位于此源代码树根目录中的 LICENSE 文件中。
+ * 最后修改时间：2023/4/2 下午4:58
  */
 
 module.exports = {
