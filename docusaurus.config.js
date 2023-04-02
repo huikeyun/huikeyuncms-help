@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2023. 慧科云
  * 此源代码根据 MIT 许可证进行许可，该许可证位于此源代码树根目录中的 LICENSE 文件中。
- * 最后修改时间：2023/4/2 下午5:03
+ * 最后修改时间：2023/4/2 下午5:13
  */
 
 /** @type {import("@docusaurus/types").Config} */
@@ -34,7 +34,7 @@ const config = {
             ({
                 // 全局样式。
                 theme: {
-                    customCss: require.resolve('./src/css/custom.css'),
+                    customCss: [require.resolve('./src/css/custom.scss')],
                 },
 
                 // 文档内容插件（false 表示禁用）
@@ -102,8 +102,7 @@ const config = {
                         sidebarId: 'tutorialSidebar',
                         position: 'left', // 此项应显示在导航栏的一侧
                         label: '文档', // 要为此项目显示的名称
-                    },
-                    // {to: 'blog', label: 'Blog', position: 'left'},
+                    }, // {to: 'blog', label: 'Blog', position: 'left'},
                     // 请保持右侧的 GitHub 链接以保持一致性。
                     {
                         href: 'https://github.com/facebook/docusaurus',
@@ -118,8 +117,7 @@ const config = {
                             {
                                 label: 'Facebook',
                                 href: 'https://www.facebook.com',
-                            },
-                            // ... more items
+                            }, // ... more items
                         ],
                     },
                 ],
@@ -214,6 +212,9 @@ const config = {
     plugins: [
         // 图像缩放插件
         'docusaurus-plugin-image-zoom',
+
+        // Sass/SCSS 插件
+        'docusaurus-plugin-sass',
     ],
 };
 

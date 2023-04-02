@@ -56,7 +56,7 @@
     "description": "The label of footer link with label=Cookie 政策 linking to https://opensource.fb.com/legal/cookie-policy/"
   },
   "copyright": {
-    "message": "Copyright © 2023 慧科云, Inc. Built with Docusaurus.",
+    "message": "Copyright © 2023 慧科云 基于 Docusaurus 创建",
     "description": "The footer copyright"
   },
   "logo.alt": {
