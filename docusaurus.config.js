@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2023. 慧科云
  * 此源代码根据 MIT 许可证进行许可，该许可证位于此源代码树根目录中的 LICENSE 文件中。
- * 最后修改时间：2023/4/2 下午7:04
+ * 最后修改时间：2023/4/2 下午7:36
  */
 
 /** @type {import("@docusaurus/types").Config} */
@@ -16,11 +16,13 @@ const config = {
     staticDirectories: ['public', 'static'], // 静态资源
     // GitHub 页面部署配置。
     // 如果您不使用 GitHub 页面，则不需要这些页面。
-    // organizationName: 'facebook', // 通常是您的 GitHub 组织用户名。
-    // projectName: 'docusaurus', // 通常是您的存储库名称。
+    organizationName: 'huikeyun', // 通常是您的 GitHub 组织用户名。
+    projectName: 'huikeyuncms-help', // 通常是您的存储库名称。
 
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
+
+    trailingSlash: false, // 允许自定义 URL/链接末尾是否存在尾部斜杠，以及如何生成静态 HTML 文件。
 
     // 用于本地化站点的 i18n 配置对象。
     i18n: {
