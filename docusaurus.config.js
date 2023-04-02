@@ -1,9 +1,7 @@
 /*
  * Copyright (c) 2023. 慧科云
- *
  * 此源代码根据 MIT 许可证进行许可，该许可证位于此源代码树根目录中的 LICENSE 文件中。
- *
- * 最后修改时间：2023/4/2 下午4:01
+ * 最后修改时间：2023/4/2 下午4:25
  */
 // @ts-check
 // 注意：类型注释允许类型检查和 IDE 自动完成
@@ -12,7 +10,7 @@
 const config = {
   title: '慧科云CMS帮助文档', // 网站标题。
   tagline: '著作权登记号：2022SR1480776', // 网站的标语。
-  favicon: 'img/favicon.ico', // 必须是可以在链接的 href 中使用的 URL。
+  favicon: 'favicon.ico', // 必须是可以在链接的 href 中使用的 URL。
 
   url: 'https://help.13aq.com', // 在此处设置您网站的生产网址
   baseUrl: '/', // 站点的路径名; 对于 GitHub 页面部署，它通常是 <projectName>

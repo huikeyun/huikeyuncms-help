@@ -1,0 +1,7 @@
+# 开启 mb_string 函数库
+
+1. 确保你的Windows/system32下有`php_mbstring.dll`这个文件，没有就从你Php安装目录extensions里拷入Windows/system32里面。
+2. 在windows目录下找到php.ini打开编辑，搜索`mbstring.dll`，找到`;extension=php_mbstring.dll`
+3. 然后将前面的;号去掉，打开对组件的支持
+4. 重启PHP服务
+5. 完成
