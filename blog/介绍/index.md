@@ -1,16 +1,17 @@
 ---
 slug: welcome
-title: Welcome
+title: 介绍
 authors: [slorber, yangshun]
 tags: [facebook, hello, docusaurus]
 ---
 
 [Docusaurus blogging features](https://docusaurus.io/docs/blog) are powered by the [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog).
 
+## 一
 Simply add Markdown files (or folders) to the `blog` directory.
-
+## 二
 Regular blog authors can be added to `authors.yml`.
-
+## 三
 The blog post date can be extracted from filenames, such as:
 
 - `2019-05-30-welcome.md`

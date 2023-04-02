@@ -1,53 +1,45 @@
 /**
  * Copyright (c) Meta Platforms, Inc. and affiliates.
  *
- * This source code is licensed under the MIT license found in the
- * LICENSE file in the root directory of this source tree.
+ * 此源代码根据 MIT 许可证进行许可，该许可证位于此源代码树根目录中的 LICENSE 文件中。
  *
  * @format
  */
 // @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
+// 注意：类型注释允许类型检查和 IDE 自动完成
 
-/** @type {import('@docusaurus/types').Config} */
+/** @type {import("@docusaurus/types").Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'The tagline of my site',
-  favicon: 'img/favicon.ico',
+  title: '慧科云CMS帮助文档', // 网站标题。
+  tagline: '著作权登记号：2022SR1480776', // 网站的标语。
+  favicon: 'img/favicon.ico', // 必须是可以在链接的 href 中使用的 URL。
 
-  // Set the production url of your site here
-  url: 'https://your-docusaurus-test-site.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  url: 'https://help.13aq.com', // 在此处设置您网站的生产网址
+  baseUrl: '/', // 站点的路径名; 对于 GitHub 页面部署，它通常是 <projectName>
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  // GitHub 页面部署配置。
+  // 如果您不使用 GitHub 页面，则不需要这些页面。
+  // organizationName: 'facebook', // 通常是您的 GitHub 组织用户名。
+  // projectName: 'docusaurus', // 通常是您的存储库名称。
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
+  // 用于本地化站点的 i18n 配置对象。
+  i18n: {
+    defaultLocale: 'zh-Hans',
+    locales: ['zh-Hans'], // 站点上部署的区域设置列表。
+    path: 'i18n', // 所有区域设置文件夹都相对于的根文件夹。
+  },
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
+      /** @type {import("@docusaurus/preset-classic").Options} */
       ({
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          sidebarPath: require.resolve('./sidebars.js'), // 请将其更改为您的存储库。
         },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
+        blog: false,
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -56,28 +48,59 @@ const config = {
   ],
 
   themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    /** @type {import("@docusaurus/preset-classic").ThemeConfig} */
     ({
+      // 元图像
       image: 'img/docusaurus-social-card.jpg',
-      navbar: {
-        title: 'My Meta Project',
-        logo: {
-          alt: 'My Meta Project Logo',
-          src: 'img/logo.svg',
+
+      // 元数据
+      metadata: [
+        {
+          name: 'keywords',
+          content: '慧科云CMS, 帮助文档, 内容管理系统',
         },
+        {
+          name: 'description',
+          content: '慧科云内容管理系统的帮助文档',
+        },
+      ],
+
+      // 导航栏
+      navbar: {
+        title: '慧科云CMS文档', // 导航栏的标题
+
+        // 徽标对象的自定义
+        logo: {
+          alt: '慧科云CMS帮助文档', // 徽标图像的 Alt 标记。
+          src: 'img/logo.svg', // 浅色模式下徽标图像的网址
+          srcDark: 'img/logo.svg', // 在深色模式下使用的备用图像 URL。
+        },
+
+        // 导航栏项
         items: [
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Tutorial',
+            position: 'left', // 此项应显示在导航栏的一侧
+            label: '文档', // 要为此项目显示的名称
           },
-          {to: 'blog', label: 'Blog', position: 'left'},
-          // Please keep GitHub link to the right for consistency.
+          // {to: 'blog', label: 'Blog', position: 'left'}, // 请保持右侧的 GitHub 链接以保持一致性。
           {
             href: 'https://github.com/facebook/docusaurus',
             label: 'GitHub',
             position: 'right',
+          },
+          {
+            type: 'dropdown',
+            label: '社区',
+            position: 'right',
+            items: [
+              {
+                label: 'Facebook',
+                href: 'https://www.facebook.com',
+              },
+              // ... more items
+            ],
           },
         ],
       },
@@ -89,11 +112,11 @@ const config = {
             items: [
               {
                 label: 'Style Guide',
-                to: 'docs/',
+                href: 'https://docusaurus.io',
               },
               {
                 label: 'Second Doc',
-                to: 'docs/doc2',
+                href: 'https://docusaurus.community/',
               },
             ],
           },
@@ -128,37 +151,34 @@ const config = {
             ],
           },
           {
-            title: 'Legal',
-            // Please do not remove the privacy and terms, it's a legal requirement.
+            title: 'Legal', // 请不要删除隐私和条款，这是法律要求。
             items: [
               {
-                label: 'Privacy',
+                label: '隐私',
                 href: 'https://opensource.fb.com/legal/privacy/',
               },
               {
-                label: 'Terms',
+                label: '条款',
                 href: 'https://opensource.fb.com/legal/terms/',
               },
               {
-                label: 'Data Policy',
+                label: '数据政策',
                 href: 'https://opensource.fb.com/legal/data-policy/',
               },
               {
-                label: 'Cookie Policy',
+                label: 'Cookie 政策',
                 href: 'https://opensource.fb.com/legal/cookie-policy/',
               },
             ],
           },
         ],
         logo: {
+          // 此默认值包括正面和负面版本，允许根据您网站的样式适当使用。
           alt: 'Meta Open Source Logo',
-          // This default includes a positive & negative version, allowing for
-          // appropriate use depending on your site's style.
           src: '/img/meta_opensource_logo_negative.svg',
           href: 'https://opensource.fb.com',
-        },
-        // Please do not remove the credits, help to publicize Docusaurus :)
-        copyright: `Copyright © ${new Date().getFullYear()} Meta Platforms, Inc. Built with Docusaurus.`,
+        }, // 请不要删除演职员表，帮助宣传纪录片:)
+        copyright: `Copyright © ${new Date().getFullYear()} 慧科云, Inc. Built with Docusaurus.`,
       },
     }),
 };
