@@ -3,7 +3,7 @@
  *
  * 此源代码根据 MIT 许可证进行许可，该许可证位于此源代码树根目录中的 LICENSE 文件中。
  *
- * 最后修改时间：2023/4/2 下午3:52
+ * 最后修改时间：2023/4/2 下午4:10
  */
 
 import React from 'react';
@@ -67,7 +67,7 @@ export default function Home() {
   const {siteConfig = {}} = context;
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={`首页`}
       description="Description will go into a meta tag in <head />">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
@@ -86,7 +86,7 @@ export default function Home() {
         </div>
       </header>
       <main>
-        {features && features.length > 0 && (
+        {/* {features && features.length > 0 && (
           <section className={styles.features}>
             <div className="container">
               <div className="row">
@@ -101,7 +101,7 @@ export default function Home() {
               </div>
             </div>
           </section>
-        )}
+        )} */}
       </main>
     </Layout>
   );
