@@ -1,8 +1,8 @@
-/*
+/*******************************************************************************
  * Copyright (c) 2023. 慧科云
  * 此源代码根据 MIT 许可证进行许可，该许可证位于此源代码树根目录中的 LICENSE 文件中。
- * 最后修改时间：2023/4/2 下午9:39
- */
+ * 最后修改时间：2023/4/3 上午6:38
+ ******************************************************************************/
 
 /** @type {import("@docusaurus/types").Config} */
 const config = {
@@ -11,17 +11,18 @@ const config = {
     favicon: 'favicon.ico', // 必须是可以在链接的 href 中使用的 URL。
     url: 'https://help.13aq.com', // 在此处设置您网站的生产网址
     baseUrl: '/', // 站点的路径名; 对于 GitHub 页面部署，它通常是 <projectName
-    staticDirectories: ['public', 'static'], // 静态资源
-
+    staticDirectories: ['public', 'static'], // 相对于站点目录或绝对路径的路径数组。这些路径下的文件将按原样复制到生成输出。
     // GitHub 页面部署配置。
     // 如果您不使用 GitHub 页面，则不需要这些页面。
     organizationName: 'huikeyun', // 通常是您的 GitHub 组织用户名。
     projectName: 'huikeyuncms-help', // 通常是您的存储库名称。
     onBrokenLinks: 'throw',
-    onBrokenMarkdownLinks: 'warn',
-    // themes: ['@docusaurus/theme-search-algolia'],
+    onBrokenMarkdownLinks: 'warn', // themes: ['@docusaurus/theme-search-algolia'],
     trailingSlash: false, // 允许自定义 URL/链接末尾是否存在尾部斜杠，以及如何生成静态 HTML 文件。
-
+    // 一组要加载的脚本
+    //scripts: ['/fontawesome/js/all.min.js'],
+    // 一组要加载的 CSS 样式
+    // stylesheets: ['/fontawesome/css/all.min.css'],
     // 用于本地化站点的 i18n 配置对象。
     i18n: {
         defaultLocale: 'zh-Hans',
@@ -109,7 +110,7 @@ const config = {
 
                     // 请保持右侧的 GitHub 链接以保持一致性。
                     {
-                        href: 'https://github.com/facebook/docusaurus',
+                        href: 'https://github.com/huikeyun/huikeyuncms-help',
                         label: 'GitHub',
                         position: 'right',
                     },
