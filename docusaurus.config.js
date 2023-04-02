@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2023. 慧科云
  * 此源代码根据 MIT 许可证进行许可，该许可证位于此源代码树根目录中的 LICENSE 文件中。
- * 最后修改时间：2023/4/2 下午5:41
+ * 最后修改时间：2023/4/2 下午7:04
  */
 
 /** @type {import("@docusaurus/types").Config} */
@@ -13,6 +13,7 @@ const config = {
     url: 'https://help.13aq.com', // 在此处设置您网站的生产网址
     baseUrl: '/', // 站点的路径名; 对于 GitHub 页面部署，它通常是 <projectName>
 
+    staticDirectories: ['public', 'static'], // 静态资源
     // GitHub 页面部署配置。
     // 如果您不使用 GitHub 页面，则不需要这些页面。
     // organizationName: 'facebook', // 通常是您的 GitHub 组织用户名。
