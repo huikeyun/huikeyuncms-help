@@ -1,6 +1,17 @@
 {
     "name": "huikeyuncms-help",
-    "version": "0.0.0",
+    "version": "1.0.0",
+    "author": {
+        "url": "https://13aq.com",
+        "email": "support@13aq.com",
+        "name": "HuiKeYun"
+    },
+    "repository": {
+        "url": "https://github.com/huikeyun/huikeyuncms-help",
+        "type": "git"
+    },
+    "homepage": "https://help.13aq.com",
+    "license": "MIT",
     "private": true,
     "scripts": {
         "docusaurus": "docusaurus",
