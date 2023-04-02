@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2023. 慧科云
  * 此源代码根据 MIT 许可证进行许可，该许可证位于此源代码树根目录中的 LICENSE 文件中。
- * 最后修改时间：2023/4/2 下午5:13
+ * 最后修改时间：2023/4/2 下午5:31
  */
 
 /** @type {import("@docusaurus/types").Config} */
@@ -194,7 +194,7 @@ const config = {
                     src: '/img/meta_opensource_logo_negative.svg',
                     href: 'https://opensource.fb.com',
                 }, // 请不要删除演职员表，帮助宣传纪录片:)
-                copyright: `Copyright © ${new Date().getFullYear()} 慧科云 基于 Docusaurus 创建`,
+                copyright: `<p><a href="https://beian.miit.gov.cn/" >粤ICP备2022065970号-1</a></p><p>Copyright © 2020 - ${new Date().getFullYear()} 慧科云 基于 <a href="https://docusaurus.io/" >Docusaurus</a> 构建</p>`,
             },
 
             // 图像缩放插件
