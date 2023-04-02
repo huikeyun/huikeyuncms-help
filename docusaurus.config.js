@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2023. 慧科云
  * 此源代码根据 MIT 许可证进行许可，该许可证位于此源代码树根目录中的 LICENSE 文件中。
- * 最后修改时间：2023/4/2 下午4:25
+ * 最后修改时间：2023/4/2 下午4:36
  */
 // @ts-check
 // 注意：类型注释允许类型检查和 IDE 自动完成
@@ -104,6 +104,8 @@ const config = {
           },
         ],
       },
+
+      // 页脚
       footer: {
         style: 'dark',
         links: [
@@ -176,7 +178,23 @@ const config = {
         }, // 请不要删除演职员表，帮助宣传纪录片:)
         copyright: `Copyright © ${new Date().getFullYear()} 慧科云, Inc. Built with Docusaurus.`,
       },
+
+      // 图像缩放插件
+      zoom: {
+        selector: '.markdown :not(em) > img',
+        background: {
+          light: 'rgb(255, 255, 255)',
+          dark: 'rgb(50, 50, 50)',
+        },
+        config: {},
+      },
     }),
+
+  // 插件
+  plugins: [
+    // 图像缩放插件
+    'docusaurus-plugin-image-zoom',
+  ],
 };
 
 module.exports = config;

@@ -6,6 +6,7 @@ specifiers:
   '@docusaurus/preset-classic': 2.4.0
   '@mdx-js/react': ^1.6.22
   clsx: ^1.2.1
+  docusaurus-plugin-image-zoom: ^0.1.1
   prettier: ^2.7.1
   react: ^17.0.2
   react-dom: ^17.0.2
@@ -16,6 +17,7 @@ dependencies:
   '@docusaurus/preset-classic': 2.4.0_sfoxds7t5ydpegc3knd667wn6m
   '@mdx-js/react': 1.6.22_react@17.0.2
   clsx: 1.2.1
+  docusaurus-plugin-image-zoom: 0.1.1
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
 
@@ -4412,6 +4414,12 @@ packages:
       '@leichtgewicht/ip-codec': 2.0.4
     dev: false
 
+  /docusaurus-plugin-image-zoom/0.1.1:
+    resolution: {integrity: sha512-cJXo5TKh9OR1gE4B5iS5ovLWYYDFwatqRm00iXFPOaShZG99l5tgkDKgbQPAwSL9wg4I+wz3aMwkOtDhMIpKDQ==}
+    dependencies:
+      medium-zoom: 1.0.8
+    dev: false
+
   /dom-converter/0.2.0:
     resolution: {integrity: sha512-gd3ypIPfOMr9h5jIKq8E3sHOTCjeirnl0WK5ZdS1AW0Odt0b1PaWaHdJ4Qk4klv+YB9aJBS7mESXjFoDQPu6DA==}
     dependencies:
@@ -6012,6 +6020,10 @@ packages:
   /media-typer/0.3.0:
     resolution: {integrity: sha512-dq+qelQ9akHpcOl/gUVRTxVIOkAJ1wR3QAvb4RsVjS8oVoFjDGTc679wJYmUmknUF5HwMLOgb5O+a3KxfWapPQ==}
     engines: {node: '>= 0.6'}
+    dev: false
+
+  /medium-zoom/1.0.8:
+    resolution: {integrity: sha512-CjFVuFq/IfrdqesAXfg+hzlDKu6A2n80ZIq0Kl9kWjoHh9j1N9Uvk5X0/MmN0hOfm5F9YBswlClhcwnmtwz7gA==}
     dev: false
 
   /memfs/3.4.13:
