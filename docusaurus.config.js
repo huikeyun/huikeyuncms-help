@@ -3,7 +3,7 @@
  *
  * 此源代码根据 MIT 许可证进行许可，该许可证位于此源代码树根目录中的 LICENSE 文件中。
  *
- * 最后修改时间：2023/4/2 下午3:46
+ * 最后修改时间：2023/4/2 下午4:01
  */
 // @ts-check
 // 注意：类型注释允许类型检查和 IDE 自动完成
@@ -37,6 +37,8 @@ const config = {
       /** @type {import("@docusaurus/preset-classic").Options} */
       ({
         docs: {
+          path: 'docs', // 文档内容目录的文件系统路径，相对于站点目录。
+          routeBasePath: '/', // 站点文档部分的 URL 前缀。
           sidebarPath: require.resolve('./sidebars.js'), // 请将其更改为您的存储库。
         },
         blog: false,
