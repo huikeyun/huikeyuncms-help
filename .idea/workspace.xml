@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a66693be-b618-4847-8863-2f3a1f0881df" name="Changes" comment="替换图标">
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="a66693be-b618-4847-8863-2f3a1f0881df" name="Changes" comment="调整">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/环境配置/PHP环境侦探工具.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/环境配置/PHP环境侦探工具.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/theme/MDXComponents.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/theme/MDXComponents.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -35,6 +36,10 @@
             <RecentBranchesForRepo>
               <option name="branches">
                 <list>
+                  <RecentBranch>
+                    <option name="branchName" value="dev" />
+                    <option name="lastUsedInstant" value="1680525814" />
+                  </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="main" />
                     <option name="lastUsedInstant" value="1680525575" />
@@ -73,7 +78,7 @@
     "ToolWindow运行.ShowToolbar": "false",
     "WebServerToolWindowFactoryState": "false",
     "code.cleanup.on.save": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "dev",
     "ignore.virus.scanning.warn.message": "true",
     "javascript.nodejs.core.library.configured.version": "19.8.1",
     "javascript.nodejs.core.library.typings.version": "18.15.11",
@@ -99,7 +104,7 @@
       <recent name="C:\Users\geekmakersun\WorkSpace\huikeyuncms-help\.github\workflows" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.build">
+  <component name="RunManager" selected="npm.start">
     <configuration name="gh-pages" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -139,7 +144,7 @@
       <workItem from="1680520512270" duration="39000" />
       <workItem from="1680520600113" duration="26000" />
       <workItem from="1680520646448" duration="454000" />
-      <workItem from="1680521268859" duration="4284000" />
+      <workItem from="1680521268859" duration="4618000" />
     </task>
     <task id="LOCAL-00001" summary="Changes">
       <created>1680495576433</created>
@@ -309,7 +314,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680524834244</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="调整">
+      <created>1680525731057</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1680525731057</updated>
+    </task>
+    <task id="LOCAL-00026" summary="调整">
+      <created>1680525776905</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1680525776905</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,7 +344,8 @@
     <MESSAGE value="替换图标为Iconify" />
     <MESSAGE value="替换图标为fortawesome" />
     <MESSAGE value="替换图标" />
-    <option name="LAST_COMMIT_MESSAGE" value="替换图标" />
+    <MESSAGE value="调整" />
+    <option name="LAST_COMMIT_MESSAGE" value="调整" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
