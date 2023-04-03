@@ -1,0 +1,47 @@
+name: 部署到 GitHub 页面
+
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+        concurrency:
+            group: ${{ github.workflow }}-${{ github.ref }}
+        defaults:
+            run:
+                working-directory: website
+        steps:
+            - uses: actions/checkout@v3
+
+            - name: 设置 Node
+              uses: actions/setup-node@v3
+              with:
+                  node-version: '18'
+
+            - name: 获取 Yarn 缓存
+              id: yarn-cache
+              run: echo "YARN_CACHE_DIR=$(yarn cache dir)" >> "${GITHUB_OUTPUT}"
+
+            - name: 缓存依赖项
+              uses: actions/cache@v3
+              with:
+                  path: ${{ steps.yarn-cache.outputs.YARN_CACHE_DIR }}
+                  key: ${{ runner.os }}-website-${{ hashFiles('**/yarn.lock') }}
+                  restore-keys: |
+                      ${{ runner.os }}-website-
+
+            - run: yarn install --frozen-lockfile
+            - run: yarn build
+
+            - name: 部署
+              uses: peaceiris/actions-gh-pages@v3
+              if: ${{ github.ref == 'refs/heads/main' }}
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: ./build
