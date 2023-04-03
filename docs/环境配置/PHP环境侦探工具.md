@@ -13,7 +13,7 @@ last_update:
 
 ## 安装
 
-[<icon icon="fa-solid fa-file-zipper" size="lg" /> 探针.zip](/探针.zip)
+[<icon icon="fa-regular fa-file-zipper" size="lg" /> 探针.zip](/探针.zip)
 
 ```html title="解压后的tz.php文件放到网站目录中，并通过url进行访问"
 https://[你的域名]/tz.php
