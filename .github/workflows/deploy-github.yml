@@ -1,58 +1,40 @@
-name: 部署到 GitHub 页面
+name: Deploy to GitHub Pages
 
 on:
     push:
         branches:
             - main
-    pull_request:
+        # Review gh actions docs if you want to further define triggers, paths, etc
+        # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
 
 jobs:
     deploy:
+        name: Deploy to GitHub Pages
         runs-on: ubuntu-latest
-        permissions:
-            contents: write
-        concurrency:
-            group: ${{ github.workflow }}-${{ github.ref }}
-        defaults:
-            run:
-                working-directory: '.'
         steps:
-            - name: 检出
-              uses: actions/checkout@v3
-
-            - name: 设置 Node
-              uses: actions/setup-node@v3
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
               with:
-                  node-version: '18'
+                  node-version: 18
+                  cache: yarn
 
-            - name: 获取 Yarn 缓存
-              id: yarn-cache
-              run: echo "YARN_CACHE_DIR=$(yarn cache dir)" >> "${GITHUB_OUTPUT}"
-
-            - name: 缓存依赖项
-              uses: actions/cache@v3
-              with:
-                  path: ${{ steps.yarn-cache.outputs.YARN_CACHE_DIR }}
-                  key: ${{ runner.os }}-website-${{ hashFiles('**/yarn.lock') }}
-                  restore-keys: |
-                      ${{ runner.os }}-website-
-
-            - name: 安装依赖包
+            - name: Install dependencies
               run: yarn install --frozen-lockfile
-
-            - name: 构建
+            - name: Build website
               run: yarn build
 
-            - name: 部署
+            # Popular action to deploy to GitHub Pages:
+            # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
+            - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v3
-              if: ${{ github.ref == 'refs/heads/master' }}
               with:
                   github_token: ${{ secrets.GITHUB_TOKEN }}
-                  # 构建输出以发布到“gh-pages”分支：
+                  # Build output to publish to the `gh-pages` branch:
                   publish_dir: ./build
-                  # 以下行将提交作者身份分配给官方 GH 操作机器人，以便部署到“gh-pages”分支：
+                  # The following lines assign commit authorship to the official
+                  # GH-Actions bot for deploys to `gh-pages` branch:
                   # https://github.com/actions/checkout/issues/13#issuecomment-724415212
-                  # 如果未指定这两个字段，则默认使用 GH 操作机器人。
-                  # 您可以将它们换成您自己的用户凭据。
+                  # The GH actions bot is used by default if you didn't specify the two fields.
+                  # You can swap them out with your own user credentials.
                   user_name: github-actions[bot]
                   user_email: 41898282+github-actions[bot]@users.noreply.github.com
