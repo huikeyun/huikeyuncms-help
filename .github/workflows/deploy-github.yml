@@ -54,3 +54,5 @@ jobs:
                   # https://github.com/actions/checkout/issues/13#issuecomment-724415212
                   # 如果未指定这两个字段，则默认使用 GH 操作机器人。
                   # 您可以将它们换成您自己的用户凭据。
+                  user_name: github-actions[bot]
+                  user_email: 41898282+github-actions[bot]@users.noreply.github.com
