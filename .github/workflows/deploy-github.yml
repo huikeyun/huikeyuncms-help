@@ -17,6 +17,9 @@ jobs:
               with:
                   node-version: 18
 
+            - name: 安装pnpm
+              run:  npm i -g pnpm
+
             - name: Install dependencies
               run: pnpm install
             - name: Build website
