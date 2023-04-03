@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # 上传的位置， "."表示整个仓库
-          path: 'build'
+          path: '/build'
       - name: 部署到 GitHub 页面
         id: deployment
         uses: actions/deploy-pages@v2
