@@ -1,9 +1,12 @@
 version: 2
 updates:
-    # 为 npm 启用版本更新
-    - package-ecosystem: "npm"
-        # Look for `package.json` and `lock` files in the `root` directory
-      directory: "/"
-        # 每天（工作日）检查 npm 注册表以获取更新
-      schedule:
-          interval: "daily"
+    -   package-ecosystem: "npm" # 要使用的包管理器
+        directory: "/" # 包清单位置
+        schedule:
+            interval: "daily" # 检查更新的频率
+            time: "09:00" # 检查的时间
+            timezone: "Asia/Shanghai" # 使用北京标准时间 （UTC +08：00）
+        allow:
+            # 对于 @mdx-js/react，只允许更新 1.x 版本
+            - dependency-name: "@mdx-js/react"
+              versions: ["1.x"]
