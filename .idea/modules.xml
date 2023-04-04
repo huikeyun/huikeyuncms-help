@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/慧科云CMS帮助文档.iml" filepath="$PROJECT_DIR$/慧科云CMS帮助文档.iml" />
+      <module fileurl="file://$PROJECT_DIR$/huikeyuncms-help.iml" filepath="$PROJECT_DIR$/huikeyuncms-help.iml" />
     </modules>
   </component>
 </project>
