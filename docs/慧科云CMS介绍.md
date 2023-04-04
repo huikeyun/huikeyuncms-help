@@ -1,6 +1,6 @@
 ---
 id: 慧科云CMS介绍
-sidebar_position: 1
+sidebar_position: 0
 description: 了解慧科云内容管理系统
 keywords:
   - cms
