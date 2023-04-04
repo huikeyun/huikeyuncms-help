@@ -1773,7 +1773,7 @@ packages:
       '@docusaurus/react-loadable': 5.5.2(react@18.2.0)
       '@docusaurus/types': 2.4.0(react-dom@18.2.0)(react@18.2.0)
       '@types/history': 4.7.11
-      '@types/react': 18.0.31
+      '@types/react': 18.0.32
       '@types/react-router-config': 5.0.6
       '@types/react-router-dom': 5.3.3
       react: 18.2.0
@@ -2120,7 +2120,7 @@ packages:
     peerDependencies:
       react: '*'
     dependencies:
-      '@types/react': 18.0.31
+      '@types/react': 18.0.32
       prop-types: 15.8.1
       react: 18.2.0
     dev: false
@@ -2192,7 +2192,7 @@ packages:
       '@docusaurus/utils': 2.4.0(@docusaurus/types@2.4.0)
       '@docusaurus/utils-common': 2.4.0(@docusaurus/types@2.4.0)
       '@types/history': 4.7.11
-      '@types/react': 18.0.31
+      '@types/react': 18.0.32
       '@types/react-router-config': 5.0.6
       clsx: 1.2.1
       parse-numeric-range: 1.3.0
@@ -2282,7 +2282,7 @@ packages:
       react-dom: ^16.8.4 || ^17.0.0
     dependencies:
       '@types/history': 4.7.11
-      '@types/react': 18.0.31
+      '@types/react': 18.0.32
       commander: 5.1.0
       joi: 17.9.1
       react: 18.2.0
@@ -2948,7 +2948,7 @@ packages:
     resolution: {integrity: sha512-db1mx37a1EJDf1XeX8jJN7R3PZABmJQXR8r28yUjVMFSjkmnQo6X6pOEEmNl+Tp2gYQOGPdYbFIipBtdElZ3Yg==}
     dependencies:
       '@types/history': 4.7.11
-      '@types/react': 18.0.31
+      '@types/react': 18.0.32
       '@types/react-router': 5.1.20
     dev: false
 
@@ -2956,7 +2956,7 @@ packages:
     resolution: {integrity: sha512-kpqnYK4wcdm5UaWI3fLcELopqLrHgLqNsdpHauzlQktfkHL3npOSwtj1Uz9oKBAzs7lFtVkV8j83voAz2D8fhw==}
     dependencies:
       '@types/history': 4.7.11
-      '@types/react': 18.0.31
+      '@types/react': 18.0.32
       '@types/react-router': 5.1.20
     dev: false
 
@@ -2964,11 +2964,11 @@ packages:
     resolution: {integrity: sha512-jGjmu/ZqS7FjSH6owMcD5qpq19+1RS9DeVRqfl1FeBMxTDQAGwlMWOcs52NDoXaNKyG3d1cYQFMs9rCrb88o9Q==}
     dependencies:
       '@types/history': 4.7.11
-      '@types/react': 18.0.31
+      '@types/react': 18.0.32
     dev: false
 
-  /@types/react@18.0.31:
-    resolution: {integrity: sha512-EEG67of7DsvRDU6BLLI0p+k1GojDLz9+lZsnCpCRTa/lOokvyPBvp8S5x+A24hME3yyQuIipcP70KJ6H7Qupww==}
+  /@types/react@18.0.32:
+    resolution: {integrity: sha512-gYGXdtPQ9Cj0w2Fwqg5/ak6BcK3Z15YgjSqtyDizWUfx7mQ8drs0NBUzRRsAdoFVTO8kJ8L2TL8Skm7OFPnLUw==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.3

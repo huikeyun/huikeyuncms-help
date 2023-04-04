@@ -31,3 +31,13 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
 }
+
+.banner {
+    padding: 4rem;
+}
+/** 在移动设备上，缩小 padding */
+@media screen and (max-width: 996px) {
+    .heroBanner {
+        padding: 2rem;
+    }
+}
