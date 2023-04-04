@@ -43,6 +43,8 @@ const config = {
                 docs: {
                     path: 'docs', // 文档内容目录的文件系统路径，相对于站点目录。
                     routeBasePath: '/', // 站点文档部分的 URL 前缀。
+                    editUrl: ({versionDocsDirPath, docPath}) =>
+                            `https://github.com/huikeyun/huikeyuncms-help/edit/main/${versionDocsDirPath}/${docPath}`,
                     sidebarPath: require.resolve('./sidebars.js'), // 请将其更改为您的存储库。
                     sidebarCollapsible: true, // 侧边栏类别是否默认可折叠。
                     sidebarCollapsed: true, // 侧边栏类别是否默认被折叠。
@@ -128,6 +130,13 @@ const config = {
                 ],
             },
 
+            docs: {
+                sidebar: {
+                    hideable: true, // 可隐藏侧边栏
+                    autoCollapseCategories: true, // 自动折叠侧边栏类别
+                },
+            },
+
             // 页脚
             footer: {
                 style: 'dark',
@@ -199,7 +208,7 @@ const config = {
                     src: '/img/meta_opensource_logo_negative.svg',
                     href: 'https://opensource.fb.com',
                 }, // 请不要删除演职员表，帮助宣传纪录片:)
-                copyright: `<p><a href="https://beian.miit.gov.cn/" >粤ICP备2022065970号-1</a></p><p>Copyright © 2020 - ${new Date().getFullYear()} 慧科云 基于 <a href="https://docusaurus.io/" >Docusaurus</a> 构建</p>`,
+                copyright: `<p>Copyright © 2020 - ${new Date().getFullYear()} 慧科云 版权所有 &emsp; <a href="https://beian.miit.gov.cn/" >粤ICP备2022065970号-1</a></p><p>基于 Docusaurus 构建 &emsp; 由 Vercel 提供静态网页托管服务 &emsp; 由 Github 提供代码托管服务</p>`,
             },
 
             // 图像缩放插件
