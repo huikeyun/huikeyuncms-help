@@ -1,12 +1,11 @@
 version: 2
 updates:
-    -   package-ecosystem: "npm" # 要使用的包管理器
-        directory: "/" # 包清单位置
-        schedule:
-            interval: "daily" # 检查更新的频率
-            time: "09:00" # 检查的时间
-            timezone: "Asia/Shanghai" # 使用北京标准时间 （UTC +08：00）
-        allow:
-            # 对于 @mdx-js/react，只允许更新 1.x 版本
-            - dependency-name: "@mdx-js/react"
-              versions: ["1.x"]
+  - package-ecosystem: "npm" # 要使用的包管理器
+    directory: "/" # 包清单位置
+    schedule:
+      interval: "daily" # 检查更新的频率
+      time: "09:00" # 检查的时间
+      timezone: "Asia/Shanghai" # 使用北京标准时间 （UTC +08：00）
+    allow: # 对于 @mdx-js/react，只允许更新 1.x 版本
+      - dependency-name: "@mdx-js/react"
+        versions: [ "1.x" ]
